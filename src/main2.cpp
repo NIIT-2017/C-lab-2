@@ -6,8 +6,8 @@
 int main(void)
 {
 	int secret,value=-1;
-	srand(time(NULL));
-	secret = 1 + rand() % 100;
+	
+	secret = 1 + time(NULL) % 100;
 	while (turn(value,secret)!=0)
 	{
 		printf("Your turn: ");
