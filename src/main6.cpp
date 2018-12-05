@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include < string.h >
+#include <cstring>
 #include "task6.h"
 int main()
 {
