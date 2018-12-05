@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <windows.h>
+#include <unistd.h>
 #include "task1.h"
 
 
@@ -16,7 +16,7 @@ int main()
 	{
 		printf("t=%dc   h=%.1fm\n", currTime, height(currTime, startHeight));
 		currTime = currTime + 1;
-		Sleep(1000);
+		sleep(1);
 	}
 	printf("Babah!!!\n");
 	

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include <windows.h>
+#include <unistd.h>
 #include "task5.h"
 
 
@@ -19,7 +19,7 @@ int main()
 
 		password(line);
 		printf("%s\r", line);
-		Sleep(1000);
+		sleep(1);
 
 		putchar('\n');
 	}
