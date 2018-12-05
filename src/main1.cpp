@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <Windows.h>
+#include <time.h>
 #include "task1.h"
 
 int main(void)
@@ -13,7 +13,8 @@ int main(void)
 	while (height(t, startHeight) > 0)
 	{
 		printf("t=%02d c h=%2.1f m\n", t, height(t, startHeight));
-		Sleep(1000);
+		unsigned int retTime = time(0) + 1;
+		while (time(0) < retTime);
 		t++;
 	}
 	printf("BABAH!!!");
