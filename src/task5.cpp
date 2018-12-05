@@ -1,7 +1,7 @@
 #include <time.h>
 #include <stdlib.h>
-//#include <Windows.h>
-#include <inttypes.h>
+#include <Windows.h>
+
 
 long long int microseconds() //попытаемся внести случайность микросекундами
 {
