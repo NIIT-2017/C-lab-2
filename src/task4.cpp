@@ -2,9 +2,9 @@ char* process(char* line)
 {
 	int i = 0;
 	char temp='!';
-	while (line[i] != '\0')
+	while (line[i] != '\n')
 		i++;
-	int j = i - 2;
+	int j = i - 1;
 	i = 0; 
 	while (i < j)
 	{

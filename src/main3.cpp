@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "task3.h"
+
 int main()
 {
 	int count = 0;
