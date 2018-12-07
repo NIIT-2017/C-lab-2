@@ -3,7 +3,7 @@
 char * clear(char * line)
 {
 	int size = strlen(line);
-	
+
 	while (line[0] == ' ')
 	{
 		for (int k = 0; k < size; k++)
@@ -29,3 +29,4 @@ char * clear(char * line)
 	}
 	return line;
 }
+
