@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <Windows.h>
 #include <math.h>
 
 const float g = 9.81;
@@ -34,7 +33,6 @@ float height(int currTime, int startHeight)
 		{
 			printf("t=%02dc\t%09.2f\n", moment_time, currHeight);
 		}
-		Sleep (100);
 	}
 	return printf("BABAH!!!");
 }

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "task1.h"
 #include <math.h>
-#include <Windows.h>
 
 const double g = 9.81;
 
