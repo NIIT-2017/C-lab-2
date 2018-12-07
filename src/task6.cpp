@@ -23,9 +23,9 @@ char * clear(char * line)
 			size = size - 1;
 		}
 	}
-	if (line[size - 2] == ' ')
+	if (line[size - 1] == ' ')
 	{
-		line[size - 2] = line[size - 1];
+		line[size-1] = '\0';
 	}
 	return line;
 }
