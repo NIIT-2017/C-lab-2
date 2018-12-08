@@ -8,9 +8,9 @@ int middcell = count / 2;
 for (i1 = 0; i1 < count; i1++)
 	buf[i1] = ' ';
 
-for (buf[middcell] = '*', i = 0; i < line; i++)
+for (buf[middcell] = '*', i = 0; i < line; i++, printf("\n"))
 {
-	for (printf("\n"), i1 = 0, buf[middcell - i] = buf[middcell + i] = '*'; i1 < count; i1++)
+	for ( i1 = 0, buf[middcell - i] = buf[middcell + i] = '*'; i1 < count; i1++)
 		printf("%c", buf[i1]);
 }
 
