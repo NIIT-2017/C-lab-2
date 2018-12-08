@@ -5,16 +5,16 @@
 
 float height(int currTime, int startHeight)
 {
-	for (float height_t = 1; height_t > 0; currTime++)
+	for (float height_t = 0; height_t >= 0; currTime++)
 	{
 		int plus = time (NULL) + 1;
 		while (time(NULL) < plus);
 
 		height_t = startHeight - 9.81*(currTime*currTime) / 2;
-				if (height_t > 0)
+				if (height_t >= 0)
 			printf("t=%02d c   h=%.1f m\n", currTime, height_t);
 		else 
-			printf("BABAH!!!", currTime, height_t);
+			printf("BABAH!!!");
 	}
 
 	return 0;
