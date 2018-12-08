@@ -9,7 +9,7 @@ float height(int currTime, int startHeight)
 	{
 		height_t = startHeight - 9.81*(currTime*currTime) / 2;
 				if (height_t >= 0)
-					printf("t=%02d c   h=%.1f m\n", currTime, height_t);
+					printf("t=%02d c   h=%2.1f m\n", currTime, height_t);
 		else 
 			printf("BABAH!!!");
 		int plus = time(NULL) + 1;
