@@ -10,7 +10,10 @@ int main()
 
 	printf("Enter the number of count: ");
 	scanf("%d", &count);
-	layout(buf, line, count);
+	
+
+	for (line = 1; line <= count; line++)
+		printf("%s\n", layout(buf, line, count));
 	
 	getchar();
 	getchar();

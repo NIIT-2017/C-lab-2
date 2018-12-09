@@ -1,19 +1,12 @@
-#include <stdio.h>
 char * layout(char buf[], int line, int count)
 {
-int i1;
-int linelong = 1 + (count - 1) * 2;
-int middcell = linelong / 2;
+	for (int i = 0; i < count - line; i++)
+		buf[i] = ' ';
 
-for (i1 = 0; i1 < linelong; i1++)
-	buf[i1] = ' ';
-buf[linelong] = '\0';
+	for (int i = count - line; i < count + line - 1; i++)
+		buf[i] = '*';
 
-for (buf[middcell] = '*'; line <= count; line++)
-{
-	for (i1 = 0, buf[middcell - line + 1] = buf[middcell + line - 1] = '*'; i1 < linelong; i1++);
-puts(buf);
+	buf[count + line - 1] = '\0';
+	return buf;
 }
 
-return buf;
-}
