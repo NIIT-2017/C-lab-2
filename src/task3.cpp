@@ -3,15 +3,18 @@ char * layout(char buf[], int line, int count)
 {
 int i;
 int i1;
-int middcell = count / 2;
+int linelong = 1 + (count - 1) * 2;
+int middcell = linelong / 2;
 
-for (i1 = 0; i1 < count; i1++)
+for (i1 = 0; i1 < linelong; i1++)
 	buf[i1] = ' ';
+buf[linelong] = '\0';
 
-for (buf[middcell] = '*', i = 0; i < line; i++, printf("\n"))
+
+for (buf[middcell] = '*'; line <= count; line++)
 {
-	for ( i1 = 0, buf[middcell - i] = buf[middcell + i] = '*'; i1 < count; i1++)
-		printf("%c", buf[i1]);
+	for (i1 = 0, buf[middcell - line + 1] = buf[middcell + line - 1] = '*'; i1 < linelong; i1++);
+puts(buf);
 }
 
 return 0;

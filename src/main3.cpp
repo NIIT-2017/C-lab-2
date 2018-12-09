@@ -4,13 +4,12 @@
 
 int main()
 {
-	int line = 0;
+	int line = 1;
 	int count=0;
 	char buf[256];
 
-	printf("Enter the number of lines.\n");
-	scanf("%d", &line);
-	count = 1+(line-1)*2;
+	printf("Enter the number of count: ");
+	scanf("%d", &count);
 	layout(buf, line, count);
 	
 	getchar();
