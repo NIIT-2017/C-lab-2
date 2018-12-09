@@ -1,18 +1,18 @@
-#include <stdio.h>
+#include <string.h>
 char* process(char* line)
 {
-	int begin, end;
+	int begin=0, end = strlen(line)-1;
 	char n;
-	for (int n = 0, begin = 0, end = 9; begin < end; )
+	
+	for (;begin < end; )
 	{
-		if (line[begin] < 'a')
-		{
-			while (line [end] < 'a')
-				end--;
-			n = line[end], line[end] = line[begin], line[begin] = n, begin++, end--;
-		}
-		else begin++;
+		if (line[begin] >= 'a')
+			begin++;
+		if (line[end] <= '9')
+			end--;
+		n = line[end], line[end] = line[begin], line[begin] = n;
 	}
-	puts (line);
-	return 0;
+	
+	return line;
 }
+
