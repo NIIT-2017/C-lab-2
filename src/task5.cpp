@@ -16,5 +16,6 @@ char * password(char * line)
 			printf("%c", line[random]);
 		}
 	}
-	return 0;
+	return line;
 }
+
