@@ -4,27 +4,23 @@ char* process(char* line)
 {
 	int i = 0, j = 0, hole;
 	
-	/*if (line[strlen(line) - 1] == '\n')  
-		line[strlen(line) - 1] = '\0';*/
+	if (line[strlen(line) - 1] == '\n')  
+		line[strlen(line) - 1] = '\0';
 
 	for (;line[i] != '\0';i++);
 
-	for (i--; i > j; j++, i--)
+	for (i--; i > j; j++)
 	{
-		while (line[j] <= '9'&& i != j)
+		if (line[j] <= '9')
 		{
-			hole = line[j];
-			line[j] = line[i];
-			line[i] = hole;
-			i--;
-		}
-
-		while (line[i] > '9'&& i != j)
-		{
-			hole = line[i];
-			line[i] = line[j + 1];
-			line[j + 1] = hole;
-			j++;
+			while (line[i] <= '9')
+				i--;
+			if (i > j)
+			{
+				hole = line[j];
+				line[j] = line[i];
+				line[i] = hole;
+			}
 		}
 	}
 	return line;
