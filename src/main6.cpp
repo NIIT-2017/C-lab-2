@@ -12,7 +12,7 @@ int main()
 
 	
 	printf("%s", clear(line));
-		
+	
 	getchar();
 	return 0;
 }

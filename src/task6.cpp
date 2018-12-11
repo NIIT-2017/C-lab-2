@@ -16,8 +16,10 @@ char * clear(char * line)
 			for (i = begin; i < strlen(line); i++)
 				line[i] = line[i + 1];
 
-	for (int q = strlen(line); line[q - 2] == ' '; line[q - 2] = '\0');
-		
+	int q = strlen(line);
+	if (line[q - 2] == ' ')
+		line[q - 2] = '\0';
+	else line[q - 1] = '\0';
 	
 	return line;
 }
