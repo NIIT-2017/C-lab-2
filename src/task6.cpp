@@ -5,19 +5,19 @@ char * clear(char * line)
 {
 	int begin = 0, i=0;
 	void shift(int begin, char line);
-
+	
 	while (line[begin] == ' ')
-		for (i = begin; line[i] != '\0'; i++)
+		for (i = begin; i < strlen(line); i++)
 			line[i] = line[i + 1];
+
 	begin++;
+	for (; begin < strlen(line); begin++)
+		while (line[begin] == ' '&& line[begin + 1] == ' ')
+			for (i = begin; i < strlen(line); i++)
+				line[i] = line[i + 1];
 
-	for (; line [begin] != '\0';begin++)
-	while (line[begin] == ' '&& line [begin+1]==' ')
-		for (i = begin; line[i] != '\0'; i++)
-			line[i] = line[i + 1];
-
-	if (line[begin-2] == ' ')
-		line[begin-2] = line[begin-1];
+	for (int q = strlen(line); line[q - 2] == ' '; line[q - 2] = '\0');
+		
 	
 	return line;
 }
