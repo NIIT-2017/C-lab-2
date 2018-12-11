@@ -19,8 +19,7 @@ char * clear(char * line)
 	int q = strlen(line);
 	if (line[q - 2] == ' ')
 		line[q - 2] = '\0';
-	if (line[q - 1] = '\n')
-		line[q - 1] = '\0';
-
+	
+	
 	return line;
 }
