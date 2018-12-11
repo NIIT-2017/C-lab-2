@@ -4,8 +4,8 @@ char* process(char* line)
 {
 	int i = 0, j = 0, hole;
 	
-	if (line[strlen(line) - 1] == '\n')  //проверяем если предпоследний символ \n, меняем его на '\0'
-		line[strlen(line) - 1] = '\0';
+	/*if (line[strlen(line) - 1] == '\n')  
+		line[strlen(line) - 1] = '\0';*/
 
 	for (;line[i] != '\0';i++);
 

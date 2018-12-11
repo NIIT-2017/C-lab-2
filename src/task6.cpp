@@ -3,7 +3,7 @@
 
 char * clear(char * line)
 {
-	int lenth = strlen(line);
+	int i, lenth = strlen(line);
 
 	while (line[0] == ' ')
 	{
@@ -11,20 +11,20 @@ char * clear(char * line)
 			line[k] = line[k + 1];
 		lenth--;
 	}
-
-
-	for (int i = 0; i<=lenth; i++)
-	{
-
-		if (line[i] != ' ')
-			putchar(line[i]);
-		else
+	
+	for (i = 0; i < lenth; i++)
+		while (line[i] == ' ' && line[i + 1] == ' ')
 		{
-			for (;line[i] == ' '; i++);
-			i--;
-			printf(" ");
+			for (int k = i; k < lenth;k++)
+				line[k] = line[k + 1];
+			lenth--;
 		}
 
+	while (line[lenth-1] == ' ')
+	{
+		line[lenth-1] = '\0';
+		lenth--;
 	}
+
 	return line;
 }

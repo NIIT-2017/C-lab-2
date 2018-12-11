@@ -7,14 +7,13 @@ int main()
 {
 	char line[N];
 
-	printf("Enter a string\n");
+	printf("Enter a string: ");
 	fgets(line, N, stdin);
 
 	if (line[strlen(line) - 1] == '\n')  //проверяем если предпоследний символ \n, меняем его на '\0'
 		line[strlen(line) - 1] = '\0';
 
-	clear(line);
+	printf(clear(line));
 	
-
 	return 0;
 }
