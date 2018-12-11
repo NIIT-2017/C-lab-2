@@ -19,5 +19,5 @@ char * clear(char * line)
 	if (line[begin-2] == ' ')
 		line[begin-2] = line[begin-1];
 	
-	return 0;
+	return line;
 }

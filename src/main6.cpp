@@ -9,9 +9,9 @@ int main()
 	printf ("Enter line: \n");
 	fgets (line, 256, stdin);
 	
-	clear(line);
+	
 
-	puts (line);
+	printf ("%s", clear (line));
 	
 	getchar();
 	return 0;
