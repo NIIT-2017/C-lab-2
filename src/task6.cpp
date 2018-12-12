@@ -14,8 +14,8 @@ char * clear(char * line)
 			for (i = begin; i < strlen(line); i++)
 				line[i] = line[i + 1];
 
-	for (begin = strlen(line); line[begin - 2] == ' '; begin--)
-		line[begin - 2] = ' ';
+	for (begin = strlen(line); line[begin - 1] == ' ';)
+		line[begin - 1] = '\0';
 
 	return line;
 }
