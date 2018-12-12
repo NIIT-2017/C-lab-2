@@ -6,18 +6,17 @@
 
 int main()
 {
-	char line[62];
-	int i = 0;
+	char line[10];
+	
 
-	for (i = 0; i < 10; i++)
-		line[i] = '0'+i;
-	for (i = 0; i < 26; i++)
-		line[i+10] = 'a'+i;
-	for (i = 0; i < 26; i++)
-		line[i + 36] = 'A'+i;
-
-	password(line);
+	for (int number = 0; number < 10; number++)
+	{
+		int plus = time(NULL) + 1;
+		while (time(NULL) < plus);
+		printf("%s\n", password(line));
+	}
 
 	getchar();
 	return 0;
 }
+
