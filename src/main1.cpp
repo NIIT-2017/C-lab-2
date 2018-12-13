@@ -17,15 +17,15 @@ int main()
 		if (curHeight > 0)
 		{
 			printf("t=%2d c h=%.2f m\n", t, curHeight);
-			
+			Sleep(1000);
+			t++;
 		}
-		Sleep(1000);
-		t++;
+		else
+		{
+			printf("BABAH!!!");
+		}
 	}
-
-	
 	if (curHeight < 0)
-		printf("BABAH!!!");
-
+		
 	return 0;
 }

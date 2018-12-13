@@ -1,7 +1,5 @@
 #include "task2.h"
 
-
-
 int turn(int value, int secret)
 {
 	if (value > secret)

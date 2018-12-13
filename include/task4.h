@@ -3,5 +3,4 @@
 
 char * process(char* line);
 
-
 #endif

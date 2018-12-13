@@ -15,11 +15,11 @@ char * password(char * line)
 		{
 			int a = rand() % 3;
 			if (a == 0)
-				line[i] = char(rand() % 10 + 48);   // цифры
+				line[i] = (char)(rand() % 10 + 48);   // цифры
 			if (a == 1)
-				line[i] = char(rand() % 26 + 65);   // буквы лат строчн
+				line[i] = (char)(rand() % 26 + 65);   // буквы лат строчн
 			if (a == 2)
-				line[i] = char(rand() % 26 + 97);   // буквы лат заглав
+				line[i] = (char)(rand() % 26 + 97);   // буквы лат заглав
 			if (i == 8)
 				line[8] = '\0';						// конец строки
 		}
@@ -27,21 +27,20 @@ char * password(char * line)
 
 		for (int i = 0; i < 9; i++)	//этот цикл создает 1 пароль
 		{
-			if ((line[i] >= char(48) && line[i] <= char(57))) // есть ли в пароле цифры!
+			if ((line[i] >= (char)(48) && line[i] <= (char)(57))) // есть ли в пароле цифры!
 			{
 				a = 1;
 			}
-			if ((line[i] >= char(65) && line[i] <= char(90))) // есть ли в пароле заглавная буква!
+			if ((line[i] >= (char)(65) && line[i] <= (char)(90))) // есть ли в пароле заглавная буква!
 			{
 				b = 1;
 			}
-			if ((line[i] >= char(97) && line[i] <= char(122))) // есть ли в пароле строчная буква!
+			if ((line[i] >= (char)(97) && line[i] <= (char)(122))) // есть ли в пароле строчная буква!
 			{
 				c = 1;
 			}
 			if (i == 8) 
-			{
-				
+			{				
 				if (a&&b&&c == 1) // проверка на все условия
 				{
 					printf("%s\n", line);
@@ -55,6 +54,5 @@ char * password(char * line)
 			}
 		}
 	}
-			
 	return 0;
 }

@@ -1,6 +1,6 @@
 #include "task6.h"
 #include <stdio.h>
-#define GOAL char(32)
+#define GOAL (char)(32)
 #define BUFF	50
 
 char * clear(char * line)
@@ -34,13 +34,6 @@ char * clear(char * line)
 			line[i] = '\0';
 			i = -1;  //вернуться к началу строки
 		}
-
-
-			
-			
-
 	}
-	
-
 	return 0;
 }

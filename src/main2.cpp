@@ -11,7 +11,6 @@ int main()
 	secret = rand() % 100 + 1;
 	printf("Enter a number\n");
 	scanf("%d", &value);
-
 	do
 	{
 		result = turn(value, secret);
@@ -26,12 +25,6 @@ int main()
 			scanf("%d", &value);
 		}
 	} 	while (result != 0);
-
-	
-		printf("Congratulations, you guessed it!\n");
-	
-
-	
-
+	printf("Congratulations, you guessed it!\n");
 	return 0;
 }

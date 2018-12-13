@@ -5,7 +5,6 @@
 #include "task6.h"
 #define BUFF	50
 
-
 int main()
 { 
 	// создадим строку
@@ -18,11 +17,11 @@ int main()
 	{
 		int a = rand() % 3;
 		if (a == 0)
-			line[i] = char(32);               // пробел
+			line[i] = (char)(32);               // пробел
 		if (a == 1)
-			line[i] = char(rand() % 26 + 65); // буквы лат строчн
+			line[i] = (char)(rand() % 26 + 65); // буквы лат строчн
 		if (a == 2)
-			line[i] = char(rand() % 26 + 97); // буквы лат заглав
+			line[i] = (char)(rand() % 26 + 97); // буквы лат заглав
 		/*if (a == 3)
 			line[i] = char(rand() % 10 + 48); // цифры*/
 		if (i == BUFF-1)
