@@ -3,12 +3,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include "task4.h"
-#define BUFF	75
+#define BUFF	512
 
 int main()
 {
 	srand(time(NULL));
-	//int result = 1;
 	char  line[BUFF] = {0};
 	for (int i = 0; i < BUFF; i++)
 	{
@@ -19,6 +18,7 @@ int main()
 			line[i] = (char)(rand() % 26 + 65); // буквы лат строчн
 		if (a == 2)
 			line[i] = (char)(rand() % 26 + 97); // буквы лат заглав
+		line[BUFF - 100] = '\0';				     // конец строки
 		line[BUFF - 1] = '\0';				     // конец строки
 	}
 	printf("%s", line);
