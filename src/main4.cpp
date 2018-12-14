@@ -2,10 +2,14 @@
 #include "task4.h"
 #include <time.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
-	char buf[10];
+	char buf[512];
+	printf("Enter a string: ");
+	fgets(buf, 512, stdin);
+	/*char buf[512];
 	int random;
 	srand(time(NULL));
 	printf("String: \n");
@@ -17,7 +21,7 @@ int main()
 		if (random == 0)
 		buf[i] = rand() % ('z'-'a'+1) + 'a';
 	}
-	buf[9] = 0;
+	buf[9] = 0;*/
 	
 	printf(buf);
 	putchar('\n');

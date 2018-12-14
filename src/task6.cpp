@@ -10,7 +10,7 @@ char * clear(char * buf)
 	{
 		if (buf[i] == ' ')
 			spaceCounter++;
-		if (buf[i] != ' ' && spaceCounter>1)
+		if (buf[i] != ' ' && spaceCounter>=1)
 		{
 			for (int j = i - (spaceCounter - 1); buf[j] != 0; j++)
 			{
