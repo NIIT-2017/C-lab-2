@@ -30,8 +30,10 @@ char * clear(char * buf)
 			buf[i - 1] = buffer;
 		}
 	}
+
+	if (buf[(strlen(buf) - 1)]==' ')
+	buf[(strlen(buf) - 1)] = '\0';
 	
-	buf[(strlen(buf) - 1)] = 0;
 	return buf;
 }
 
