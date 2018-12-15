@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
-#include <windows.h>
+//#include <windows.h>
 #include "task1.h"
 
 #define GI 9.81
@@ -14,7 +14,7 @@ int main()
 	for (i = 0; (height(currTime, startHeight)) >= 0; currTime++)
 	{
 		printf("t=%02d sec.      h=%06.1f m.\n", currTime, height(currTime, startHeight));
-		Sleep(1000);
+		//Sleep(1000);
 	}
 	printf("BABAH!!!");
 	return 0;
