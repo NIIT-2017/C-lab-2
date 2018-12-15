@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include <windows.h>
+//#include <windows.h>
 #include "task5.h"
 
 
@@ -13,7 +13,7 @@ int main()
 	for (i = 0; i < 10; i++)
 	{
 		printf("%s\n", password(line));
-		Sleep(1000);
+		//Sleep(1000);
 	}
 	return 0;
 }
