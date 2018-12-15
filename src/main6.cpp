@@ -6,6 +6,6 @@ int main()
 	char line[100];
 	puts("Enter a string please:");
 	fgets(line, 100, stdin);
-	printf(clear(line));
+	printf("%s", clear(line));
 	return 0;
 }
