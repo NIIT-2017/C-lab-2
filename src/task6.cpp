@@ -37,9 +37,9 @@ char * clear(char * line)
 	// deleting ' ' in the end
 	for (int i = 1; i < length; i++)
 	{
-		if (line[i] != '\n')
+		if ((line[i] != '\n') && (line[i] != '\0'))
 			continue;
-		else if (line[i] == '\n')
+		else if ((line[i] == '\n') || (line[i] == '\0'))
 		{
 			if (line[i-1] != ' ')
 				break;
@@ -47,6 +47,7 @@ char * clear(char * line)
 			{
 				line[i] = '\0';
 				line[i - 1] = '\0';
+				break;
 			}
 		}
 	}
