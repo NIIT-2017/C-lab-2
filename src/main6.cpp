@@ -10,6 +10,5 @@ int main()
 	fgets(line, 100, stdin);
 
 	printf("%s", clear(line));
-
 	return 0;
 }

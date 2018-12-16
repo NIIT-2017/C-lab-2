@@ -43,10 +43,10 @@ char * clear(char * line)
 		else
 		{
 			if (line[i-1] != ' ')
-				break;
+				line[i] = 0;
 			else
 			{ 
-				line[i - 1] = '\n';
+				line[i - 1] = 0;
 				line[i] = 0;
 			}	
 		}
