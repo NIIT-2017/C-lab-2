@@ -30,9 +30,8 @@ int main()
 	 
 	printf("%s", line);
 	printf("\n");
-	clear(line);
-
-	printf("%s", line);
+	
+	printf("%s", clear(line));
 
 	return 0;
 }

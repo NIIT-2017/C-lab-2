@@ -34,5 +34,5 @@ char * clear(char * line)
 			i = -1;  //вернуться к началу строки
 		}
 	}
-	return 0;
+	return line;
 }
