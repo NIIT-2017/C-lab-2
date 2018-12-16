@@ -29,7 +29,7 @@ int main()
 	}
 	 
 	printf("%s", line);
-	printf("\n");
+	printf("\n\n New string \n\n");
 	
 	printf("%s", clear(line));
 

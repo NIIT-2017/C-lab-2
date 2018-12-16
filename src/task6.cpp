@@ -4,25 +4,36 @@
 char * clear(char * line)
 {
 	int count = 0;
-	for (int i = 0; i <= BUFF - count; i++)
+	int size = 0;
+	//найдем длину строки
+	for (int i = 0; i < BUFF; i++)
+	{
+		size++;
+		if (line[i] == '\0')
+			i = BUFF;
+	}
+
+
+
+	for (int i = 0; i < size - count; i++)
 	{
 		if (i == 0 && line[i] == GOAL) //проверка первых элементов строки
 		{
 			count++;
-			for (int j = 0; j < BUFF - count; j++)
+			for (int j = 0; j < size - count; j++)
 			{
 				line[j] = line[j + 1];
-				i = -1; //вернуться к началу строки
+				//i = -1; //вернуться к началу строки
 			}
 		}
 		//проверка промежуточных элементов строки
 		if ((line[i] == GOAL && line[i + 1] == GOAL)/*|| (line[i] == GOAL && line[i + 1] == GOAL)*/)
 		{
 			count++;
-			for (int j = i; j < BUFF - count; j++)
+			for (int j = i; j < size - count; j++)
 			{
 				line[j] = line[j + 1];
-				i = -1; //вернуться к началу строки
+				i = i-1; //вернуться к началу строки
 			}
 		}
 		//проверка последнего элемента массива
@@ -30,7 +41,7 @@ char * clear(char * line)
 		{
 			count++;
 			line[i] = '\0';
-			i = -1;  //вернуться к началу строки
+			i = i-1;  //вернуться к началу строки
 		}
 	}
 	return line;
