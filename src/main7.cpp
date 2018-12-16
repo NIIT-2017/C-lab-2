@@ -5,7 +5,7 @@
 int main()
 {
 	char arr[100] = { 0 };
-	char new[100] = { 0 };
+ 	char arr1[100] = { 0 };
 	
 	printf("Enter a string:\n");
 	fgets(arr, 100, stdin);
@@ -26,9 +26,9 @@ int main()
 			else
 			flag = 0;
 		}
-		if (flag == 0)
+		if (!flag)
 		{
-			new[j] = arr[i];
+			arr1[j] = arr[i];
 			j++;
 			count++;
 		}
@@ -38,10 +38,10 @@ int main()
 		int count1 = 0;
 		for (int k = 0; k < length; k++)
 		{
-			if (new[i] == arr[k])
+			if (arr1[i] == arr[k])
 				count1++;
 		}
-		printf("'%c'\t%d\n", new[i], count1);
+		printf("'%c'\t%d\n", arr1[i], count1);
 	}
 	return 0;
 }
