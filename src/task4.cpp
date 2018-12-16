@@ -1,7 +1,5 @@
 #include "task4.h"
 #include <stdio.h>
-#define BUFF	512
-
 
 char* process(char* line)
 {

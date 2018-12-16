@@ -1,7 +1,6 @@
 #include "task6.h"
 #include <stdio.h>
-#define GOAL (char)(32)
-#define BUFF	50
+
 
 char * clear(char * line)
 {

@@ -1,3 +1,5 @@
+#define BUFF	512
+
 #ifndef TASK4_H
 #define TASK4_H
 

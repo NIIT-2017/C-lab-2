@@ -1,7 +1,6 @@
 #include "task5.h"
 #include <stdio.h>
-#include<time.h>
-#include <stdlib.h>
+#include <time.h>
 
 char * password(char * line)
 {
@@ -40,7 +39,8 @@ char * password(char * line)
 				c = 1;
 			}
 			if (i == 8) 
-			{				
+			{
+				
 				if (a&&b&&c == 1) // проверка на все условия
 				{
 					printf("%s\n", line);
@@ -54,5 +54,6 @@ char * password(char * line)
 			}
 		}
 	}
+			
 	return 0;
 }

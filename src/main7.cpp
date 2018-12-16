@@ -38,13 +38,13 @@ int main()
 			i = SIZEBUF;
 		}
 	}
-
+	printf("Simbol and his quantity\n");
 	for (int i = 0; i < SIZEBUF; i++)
 	{
 		if (buf[i] == (char)('\n')) //выход из массива при достижении символа
 			i = SIZEBUF;
 		else
-		printf("%c %d\n", buf[i], num[i]);
+		printf("%5c %5d\n", buf[i], num[i]);
 	}
 
 	return 0;
