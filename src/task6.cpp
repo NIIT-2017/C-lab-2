@@ -11,7 +11,7 @@ char * clear(char * line)
 			}
 		}
 	}
-	if (line[0] = ' ')
+	if (line[0] == ' ')
 		for (int k = 0; line[k] != '\0'; k++)
 		{
 			line[k] = line[k + 1];

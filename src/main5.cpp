@@ -9,6 +9,7 @@ int main()
 {
 	char *line;
 	line = new char[pass_lenght];
+	line[pass_lenght] = '\0';
 	srand(time(0));
 	int i = 0;
 	while (i < number_of_pass)

@@ -10,11 +10,11 @@ char * password(char * line)
 	while (i < pass_lenght)
 	{
 		r = rand() % 3;
-		if ( r == 0)
+		if ( r == 0 )
 			line[i] = '0' + rand() % ('9'-'0');// символ от 0(48) до 9
-		if (r ==1 )
+		if ( r == 1 )
 			line[i] = 'A' + rand() % ('Z'-'A');// символ от 'A'(65) до 'Z'
-		if(r==2)
+		if ( r == 2 )
 			line[i] = 'a' + rand() % ('z'-'a');// символ от 'a'(97) до 'z'
 		putchar(line[i]);
 		i++;

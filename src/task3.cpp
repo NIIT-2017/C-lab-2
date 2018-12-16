@@ -8,17 +8,17 @@ char * layout(char buf[], int line, int count) //line - порядковый номер строки 
 		buf[i] = ' ';
 		i++;
 	}
-	while (i<2*count)
+	while (i < 2 * count)
 	{
 		buf[i] = '*';
 		i++;
 	}
 	i = count + line-1;
-	while (i < 2 * count)
+	/*while (i < 2 * count)
 	{
-		buf[i] = ' ';
+		buf[i] = '|';
 		i++;
-	}
+	}*/
 	buf[i] = '\0';
 	return buf;
 
