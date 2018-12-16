@@ -29,7 +29,7 @@ char * password(char * line)
 	}
 
 	int j = 0, arrNumber = 0;
-	for (int i = 0; i < 8; i++)/*to get letters and numbers from str1, str2 and str3 and put 
+	for (int i = 0; i < (SIZE-1); i++)/*to get letters and numbers from str1, str2 and str3 and put 
 		them into the array "line"*/
 	{
 		arrNumber = (rand() % 3);
@@ -49,5 +49,6 @@ char * password(char * line)
 			line[i] = str3[j];
 		}
 	}
+	line[SIZE - 1] = '\0';
 	return line;
 }

@@ -5,10 +5,10 @@
 int main()
 {
 
-	char line[100] = { 0 };
+	char line[SIZE] = { 0 };
 	printf("Enter a string:\n");
-	fgets(line, 100, stdin);
-
-	printf("%s", clear(line));
+	fgets(line, SIZE, stdin);
+	clear(line);
+	printf("%s", line);
 	return 0;
 }

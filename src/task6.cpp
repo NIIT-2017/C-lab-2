@@ -1,22 +1,21 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
 #include <string.h> 
+#include "task6.h"
 
 char * clear(char * line)
 {
 	int length = strlen(line);
-	//int i = 0;
 	int from = 0;
-	for (int i = 0; i < length; i++)// counting ' ' at the begining
+	for (int i = 0; i < length; i++)// deleting ' ' at the begining
 	{
 		if (line[i] != ' ')
 			break;
 		else
 			from++;
 	}
-	for (int i = 0; i < length; i++)// deleting ' ' at the begining
+	for (int i = 0; i < length; i++)
 	{
-		line[i] = line [i+from];
+		line[i] = line[i + from];
+
 	}
 	// deleting ' ' in the middle
 	for (int i = 1; i < length; i++)
@@ -40,15 +39,15 @@ char * clear(char * line)
 	{
 		if (line[i] != '\n')
 			continue;
-		else
+		else if (line[i] == '\n')
 		{
 			if (line[i-1] != ' ')
-				line[i] = 0;
+				break;
 			else
-			{ 
-				line[i - 1] = 0;
-				line[i] = 0;
-			}	
+			{
+				line[i] = '\0';
+				line[i - 1] = '\0';
+			}
 		}
 	}
 	return line;

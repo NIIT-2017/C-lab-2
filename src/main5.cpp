@@ -4,15 +4,18 @@
 #include <stdlib.h>
 #include "task5.h"
 
+#define PASSWORDSAMOUNT 10
+
 
 int main()
 {
 	
-	char line[9] = { 0 };
-	srand(time(0)); //here, because if we put it to task5.cpp the passwords are similar
-	for (int k = 0; k < 10; k++)//to generate 10 passwords
+	char line[SIZE] = { 0 };
+	srand(time(0)); //here, because we should do it for one time
+	for (int k = 0; k < PASSWORDSAMOUNT; k++)//to generate 10 passwords
 	{
-			printf("%s\n", password(line));
+		password(line);
+		printf("%s\n", line);
 	}
 
 	return 0;

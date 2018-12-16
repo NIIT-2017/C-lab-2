@@ -5,23 +5,19 @@ char* process(char* line)
 {
 	int length = strlen(line);
 	int temp = 0;
-	for (int i = 0; i < length; i++)
+	for(int i = 0; i < length; i++)
 	{
-		if (line[i] > '9')
-			continue;
-		else
+		for (int j = length - 1; j > i; j--)
 		{
-			for (int j = (length-1); j > i; j--)
+			if ((line[i] <= '9') && (line[j] > '9'))
 			{
-				if (line[j] <= '9')
-					continue;
-				else
-				{
-					temp = line[i];
-					line[i] = line[j];
-					line[j] = temp;
-				}
+				temp = line[i];
+				line[i] = line[j];
+				line[j] = temp;
+				break;
 			}
+			else
+				continue;
 		}
 	}
 	return line;
