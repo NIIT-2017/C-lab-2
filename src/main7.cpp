@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 #define SIZEBUF 256
 
 int main()
