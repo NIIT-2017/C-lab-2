@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<string.h>
 
-char* process(char* line)
+char * process(char* line)
 {
-	int i=0, j= strlen(line) - 2;
+	int i=0, j= strlen(line) - 1;
 	char t;
 	while (i <= j)
 	{
@@ -21,5 +21,6 @@ char* process(char* line)
 		line[i] = line[j];
 		line[j] = t;	
 	}
+	
 return line;
 }
