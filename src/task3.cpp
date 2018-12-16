@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-char layout(char buf[], int line, int count)
+char * layout(char buf[], int line, int count)
 {
 	int j;
 	for (j = 0; j <= (count + line); j++)
@@ -11,7 +11,7 @@ char layout(char buf[], int line, int count)
 			buf[j] = '*';
 	}
 	buf[j] = '\0';
-	return printf("%s\n", buf);
+	return buf;
 }
 	
 

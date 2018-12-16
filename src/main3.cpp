@@ -11,7 +11,7 @@ int main()
 	scanf("%d", &count);
 	for (line = 1; line <= count; line++)
 	{
-		layout(buf, line, count);
+		printf("%s\n", layout (buf, line, count));
 	}
 	return 0;
 }
