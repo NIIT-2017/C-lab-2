@@ -3,8 +3,7 @@
 
 int main()
 {
-	int currTime, startHeight;
-	currTime = 0;
+	int currTime=0, startHeight=0;
 	printf("Enter height in metres ");
 	scanf("%d", &startHeight);
 	height(currTime, startHeight);

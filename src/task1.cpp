@@ -9,11 +9,10 @@ void sleep(int ms)
 
 float height(int currTime, int startHeight)
 {
-	double g;
-	g = 9.81;
-	for (int currTime = 0; startHeight > (g*currTime*currTime / 2); currTime++)
+	double g=9.81;
+	for (int currTime = 0; startHeight > (g * currTime*currTime / 2); currTime++)
 		{
-			printf("t=%d c   h=%.1f m\n", currTime, (startHeight - g * currTime*currTime / 2));
+			printf("t=%02d c   h=%.1f m\n", currTime, (startHeight - g * currTime*currTime / 2));
 			sleep(1000);
 		}
 	return 0;
