@@ -1,7 +1,6 @@
 #include "task6.h"
 #include <stdio.h>
 
-
 char * clear(char * line)
 {
 	int count = 0;
