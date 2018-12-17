@@ -32,13 +32,12 @@ char * clear(char * buf)
 			i = i - (spaceCounter - 1);
 			spaceCounter = 0;
 		}
-		else if (buf[i] == '\0' && spaceCounter > 0)
-			buf[i- spaceCounter]='\0';
-		else if (buf[i] != ' ' && spaceCounter == 1)
+			else if (buf[i] != ' ' && spaceCounter == 1)
 			spaceCounter = 0;
 	
 	}
-
+	if (buf[strlen(buf)-1] == ' ')
+		buf[strlen(buf) - 1] = '\0';
 
 	return buf;
 }
