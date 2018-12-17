@@ -9,14 +9,13 @@ char * clear(char * buf)
 
 	while (buf[0] == ' ')
 	{
-		for (int i = 1; i < strlen(buf); i++)
+		for (int i = 1; i <= strlen(buf); i++)
 			{
 				buffer = buf[i];
 				buf[i - 1] = buffer;
 			}
 	}
-	if (buf[strlen(buf) - 1] == '\n')
-		buf[strlen(buf) - 1] = '\0';
+	
 
 	for (int i = 0; buf[i] != '\0'; i++)
 	{
@@ -25,7 +24,7 @@ char * clear(char * buf)
 		else if (buf[i] != ' ' && spaceCounter > 1)
 		{
 			int j = i;
-			for (; j<strlen(buf); j++)
+			for (; j<=strlen(buf); j++)
 			{
 				buffer = buf[j];
 				buf[j - (spaceCounter - 1)] = buffer;
@@ -40,7 +39,12 @@ char * clear(char * buf)
 			buf[i - spaceCounter] = '\0';
 	
 	}
-
+	for (int i = 0; i <= strlen(buf); i++)
+	{
+		if (buf[i] == '\n')
+			buf[i] = '\0';
+	}
+		
 
 	return buf;
 }
