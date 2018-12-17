@@ -1,1 +1,1 @@
-float height(int currTime, int startHeight);//.
+float height(int currTime, int startHeight);
