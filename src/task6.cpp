@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "task6.h"
 
 char * clear(char * buf)
 {
@@ -8,7 +9,7 @@ char * clear(char * buf)
 
 	while (buf[0] == ' ')
 	{
-		for (int i = 1; i <= strlen(buf); i++)
+		for (int i = 1; i < strlen(buf); i++)
 			{
 				buffer = buf[i];
 				buf[i - 1] = buffer;
@@ -24,7 +25,7 @@ char * clear(char * buf)
 		else if (buf[i] != ' ' && spaceCounter > 1)
 		{
 			int j = i;
-			for (; j<=strlen(buf); j++)
+			for (; j<strlen(buf); j++)
 			{
 				buffer = buf[j];
 				buf[j - (spaceCounter - 1)] = buffer;
