@@ -42,8 +42,9 @@ char * clear(char * line)
 			line[k] = line[k + 1];
 		}
 	}
-	if (line[strlen(line-1)]==' ')
-	line[strlen(line) -1] = '\0';
+	 
+	if (line[strlen(line) - 1] == ' ')
+		line[strlen(line) - 1] = '\0';
 
 
 	return line;
