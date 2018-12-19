@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-char main()
+int main()
 {
 	srand(time(0));
 	char line[SIZE + 1] = { 0 };
