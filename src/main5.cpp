@@ -10,7 +10,7 @@ int main()
 
 	for (int j = 0; j < 10; j++)
 	{
-		process(line);
+		password(line);
 		printf("%s", line);
 		unsigned int retTime = time(0) + 1;
 		while (time(0) < retTime);
