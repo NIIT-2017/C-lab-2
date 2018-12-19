@@ -42,7 +42,7 @@ char * clear(char * line)
 			line[k] = line[k + 1];
 		}
 	}
-	line[j + 1] = '\0';
+	line[strlen(line) -2] = '\0';
 
 	return line;
 }
