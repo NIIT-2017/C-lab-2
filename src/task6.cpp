@@ -43,7 +43,7 @@ char * clear(char * line)
 		}
 	}
 	if (line[strlen(line-1)]==' ')
-	line[strlen(line) -2] = '\0';
+	line[strlen(line) -1] = '\0';
 
 
 	return line;
