@@ -1,7 +1,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-char* password(char* line)
+char * password(char* line)
 
 {
 	for (int i = 0; i <8; i++)
