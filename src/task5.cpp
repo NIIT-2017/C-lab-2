@@ -15,5 +15,6 @@ char*password(char*line)
 		else if (symbol == 2)
 			line[i] = rand() % ('z' - 'a' + 1) + 'a';
 	}
+	line[N]='\0';
 	return line;
 }
