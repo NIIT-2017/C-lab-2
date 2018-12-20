@@ -8,6 +8,6 @@ int main()
 	printf("Enter a string: ");
 	fgets(line, N, stdin);
 
-	printf("\"%s\"", clear(line));
+	printf("%s", clear(line));
 	return 0;
 }
