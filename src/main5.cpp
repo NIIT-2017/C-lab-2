@@ -1,13 +1,14 @@
+#define pass_lenght 8
+#define number_of_pass 10
 #include <stdio.h>
 #include "task5.h"
 #include <stdlib.h>
 #include <time.h>
-#define pass_lenght 8
-#define number_of_pass 10
+
 
 int main()
 {
-	char line[pass_lenght];
+	char line[pass_lenght+1];
 	//line = new char[pass_lenght];
 	//line[pass_lenght] = '\0';
 	srand(time(0));
@@ -16,7 +17,8 @@ int main()
 	{
 		printf("%d. ", i+1);
 		password(line);
-		printf("\n");
+		//line[pass_lenght] = '\0';
+		printf("%s\n",line);
 		i++;
 	}
 

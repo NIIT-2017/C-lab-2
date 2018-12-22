@@ -16,8 +16,9 @@ char * password(char * line)
 			line[i] = 'A' + rand() % ('Z'-'A');// символ от 'A'(65) до 'Z'
 		if ( r == 2 )
 			line[i] = 'a' + rand() % ('z'-'a');// символ от 'a'(97) до 'z'
-		putchar(line[i]);
+		//putchar(line[i]);
 		i++;
 	}
+	line[i] = '\0';
 	return line;
 }
