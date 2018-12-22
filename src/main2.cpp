@@ -1,4 +1,4 @@
-#include "Task2.h"
+#include "task2.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
