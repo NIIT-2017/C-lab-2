@@ -1,22 +1,20 @@
+#include <stdio.h>
+
 char* process(char* line)
 {
-	int i = 0, j = 0, lenght = printf(line) - 1;
+	int i = 0, j =  printf(line) - 1;
 	char symbol = 0;
-	while (i < lenght)
+	while (i != j )
 	{
 		if (line[i] >= '0' && line[i] <= '9')
 		{
-			symbol = line[i];
-			j = i;
-			while (j < lenght)
+			if ((line[j] >= 'a' && line[j] <= 'z') || (line[j] >= 'A' && line[j] <= 'Z'))
 			{
-				if (line[j + 1] != '\n')
-					line[j] = line[j + 1];
-				else break;
-				j++;
+				symbol = line[i];
+				line[i] = line[j];
+				line[j] = symbol;
 			}
-			line[lenght - 1] = symbol;
-			lenght--;
+			else j--;
 		}
 		else i++;
 	}
