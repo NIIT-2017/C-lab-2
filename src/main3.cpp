@@ -18,11 +18,6 @@ int main()
 	printf("Enter namber of count: ");
 	scanf("%d", &count);
 	for (int line = 1; line <= count; line++)
-	{
-		layout(buf, line, count);
-		for (int j = 0; j < count + line; j++)
-			putchar(buf[j]);
-		printf("\n");
-	}
+		puts(layout(buf, line, count));
 	return 0;
 }
