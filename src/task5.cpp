@@ -1,7 +1,5 @@
 #include <stdlib.h>
-#include "task5.h"
-
-extern const int pass_length;
+const int pass_length = 8;		//n - количество паролей
 
 char * password(char * line)
 {

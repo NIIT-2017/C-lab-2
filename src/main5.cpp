@@ -10,7 +10,7 @@
 #include <time.h>
 #include "task5.h"
 
-const int N = 10, pass_length = 8;		//n - количество паролей
+const int N = 10;		//n - количество паролей
 
 int main()
 {

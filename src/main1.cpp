@@ -7,8 +7,6 @@
 #include <math.h>
 #include "task1.h"
 
-const double G = 9.81;
-
 int main()
 {
 	int currTime = 0, startHeight = 0;

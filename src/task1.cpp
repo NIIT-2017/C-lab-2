@@ -1,4 +1,4 @@
-extern const double G;
+const double G = 9.81;
 
 float height(int currTime, int startHeight)
 {
