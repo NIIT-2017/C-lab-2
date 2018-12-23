@@ -1,4 +1,4 @@
-#include <string.h >
+#include <string.h>
 
 char* process(char* line)
 {
