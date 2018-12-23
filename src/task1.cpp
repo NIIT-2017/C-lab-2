@@ -1,4 +1,4 @@
-#include "task1.h"
+extern const double G;
 
 float height(int currTime, int startHeight)
 {
