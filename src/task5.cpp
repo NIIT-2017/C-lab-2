@@ -9,5 +9,6 @@ char * password(char * line)
 			line[i] = 48 + rand() % (122 - 48 + 1);
 		while ((line[i] >= 58 && line[i] <= 64) || (line[i] >= 91 && line[i] <= 96));
 	}
+	line[pass_length] = '\0';
 	return line;
 }
