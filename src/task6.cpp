@@ -1,6 +1,6 @@
 #include "task6.h"
 #include <string.h>
-#define UNWANTED_CHAR '-'
+#define UNWANTED_CHAR ' '
 
 char * clear(char * line)
 {
