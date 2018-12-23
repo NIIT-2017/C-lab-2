@@ -21,7 +21,7 @@ int main()
 		printf("Enter the height: ");
 		scanf_result = scanf("%d", &startHeight);
 		printf("\n");
-		clear_stdin();
+		stdin_clear();
 	} while (!scanf_result || startHeight < 0);
 
 

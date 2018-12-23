@@ -7,7 +7,7 @@ float height(int currTime, int startHeight) // расчет высоты над землей в секунд
 	return (float)(startHeight - G * currTime * currTime / 2);              //L = gt ^ 2 / 2
 }
 
-void clear_stdin(void)
+void stdin_clear(void)
 {
 	char c;
 	do {
