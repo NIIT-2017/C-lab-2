@@ -1,17 +1,16 @@
-//определение и логика функции
 #include <stdio.h>
 
-void print_str()
+char * layout(char buf[], int line, int count)
 {
-	fprintf(stdout, "Start func print_str\n");
-}
-
-void print_str_arg(char str[])
-{
-	fprintf(stdout, "Start func print_str_arg with arg: %s\n", str);
-}
-
-int summ(int num1, int num2)
-{
-	return num1 + num2;
+	int i;
+	for (i = 0; i < (count + (line - 1)); i++)
+	{
+		if (i < (count - line))
+			buf[i] = ' ';
+		else if (i >= (count - line))
+			buf[i] = '*';
+	}
+	buf[i] = '\0';
+	putchar('\n');
+	return buf;
 }
