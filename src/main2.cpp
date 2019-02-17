@@ -25,7 +25,7 @@ int main()
 
 		{
 
-			if (turn(value, secret) == -1)
+			if (turn(value, secret) == 1)
 
 				printf("Peeeerebor, poprobyi eshe:\n");
 
