@@ -1,5 +1,6 @@
 #include "task5.h"
 #define _CRT_SECURE_NO_WARNINGS
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -24,7 +25,7 @@ char * password(char * line)
 	strcat(buf, buf2);
 	for (int m = 0; m < 8; m++)
 	{			
-		int n = rand() % 62;		
+		int n = (rand() % 62);		
 		line[m] = buf[n];
 		line[8] = '\0';
 	}
