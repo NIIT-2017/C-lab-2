@@ -1,4 +1,5 @@
 #include "task2.h"
+#include <stdio.h>
 
 int turn(int value, int secret)
 {
