@@ -22,7 +22,7 @@ char * clear(char * line)
 		}
 		j++;
 	}
-	if (line[length-1] == ' ')
-	line[length-1] = '\0';
+	if (line[length-1] == '\n')
+	line[length-2] = '\0';
 	return line;
 }
