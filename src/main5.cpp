@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <time.h>
-#include <windows.h>
 #include "task5.h"
 
 
