@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "task1.h"
-#include "windows.h"
 
 int main()
 
@@ -15,7 +14,7 @@ int main()
 	{
 		printf("t=%d    H=%0.1f\n", currTime, height(currTime, startHeight));
 		currTime++;
-		Sleep(100);
+		
 	}
 
 	printf("BABAH!");
