@@ -13,7 +13,6 @@ int main()
 	for (i = 0; i < 10; i++)
 	{
 	 printf("%s\n", password(line));
-	Sleep(1000);
 	}
 
 	getchar();
