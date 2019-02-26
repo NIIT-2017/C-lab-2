@@ -3,4 +3,4 @@
 
 int turn(int value, int secret);
 
-#endif 
+#endif

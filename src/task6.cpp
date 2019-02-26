@@ -1,30 +1,40 @@
-#include "task6.h"
 #include <string.h>
+#include "task6.h"
 
-char * clear(char * line)
+
+char* clear(char *line)
 {
-	int i, lenth = strlen(line);
-
-	while (line[0] == ' ')
+	int word = 0;
+	int pos = 0, flag = 0;
+	int y = 0;
+	int end;
+	int i;
+	for (i = 0; line[i]; ++i)
 	{
-		for (int k = 0; k < lenth; k++)
-			line[k] = line[k + 1];
-		lenth--;
-	}
-
-	for (i = 0; i < lenth; i++)
-		while (line[i] == ' ' && line[i + 1] == ' ')
+		if (!flag && line[i] == '\ ' && !word)
 		{
-			for (int k = i; k < lenth; k++)
-				line[k] = line[k + 1];
-			lenth--;
+			pos = i;
+			flag = 1;
 		}
-
-	while (line[lenth - 1] == ' ')
-	{
-		line[lenth - 1] = '\0';
-		lenth--;
+		else  if (line[i] == '\ ' && word)
+		{
+			end = i;
+			word = 0;
+		}
+		else if (line[i] != '\ ' && !word)
+		{
+			if (flag)
+			{
+				y = i;
+				i = pos;
+				while (line[pos++] = line[y++]);
+				flag = 0;
+			}
+			word = 1;
+		}
 	}
+	if (line[i - 1] == '\ ')
+		line[end] = '\0';
 
 	return line;
 }

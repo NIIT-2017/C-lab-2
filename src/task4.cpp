@@ -1,30 +1,27 @@
-#include "task4.h"
 #include <string.h>
+#include "task4.h"
 
-char* process(char* line)
+
+char* process(char *line)
 {
-	int i = 0, j = strlen(line) - 1;
 	char buf;
-	while (i < j)
+	int begin = 0, end = strlen(line);
+	for (; begin < end; begin++)
 	{
-		if (line[i] >= 'a'&&line[i] <= 'z')
+		if (('0' <= line[begin]) && (line[begin] <= '9'))
 		{
-			i++;
-			continue;
+			for (; begin < end; end--)
+			{
+				if (('A' <= line[end]) && (line[end] <= 'z'))
+				{
+					buf = line[begin];
+					line[begin] = line[end];
+					line[end] = buf;
+					break;
+				}
+
+			}
 		}
-		if (line[i] >= 'A'&&line[i] <= 'Z')
-		{
-			i++;
-			continue;
-		}
-		if (line[j] >= '0'&&line[j] <= '9')
-		{
-			j--;
-			continue;
-		}
-		buf = line[i];
-		line[i] = line[j];
-		line[j] = buf;
 	}
 	return line;
 }

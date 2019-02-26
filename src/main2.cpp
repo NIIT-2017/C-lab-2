@@ -1,30 +1,24 @@
-#include "task2.h"
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
+#include "task2.h"
 #include <time.h>
 
 int main()
 {
-	int n, f, s;
-	s = 1 + rand() % 100;
-	srand(time(NULL));
-	do
-
+	srand(time(0));
+	int value = 0, secret = 0, result = 1;
+	secret = rand() % 100;
+	while (result)
 	{
-		printf("Enter a number");
-		scanf("%d", &n);
-
-		f = turn(n, s);
-
-		if (f == 1)
-			printf("under\n");
-		if (f == -1)
-			printf("more\n");
-		if (f == 0)
-			printf("Guessed!\n");
-
-	} while (n != s);
-	printf("Guessed!\n");
+		printf("Enter the number between 1 and 100:");
+		scanf("%d", &value);
+		result = turn(value, secret);
+		if (result > 0)
+			printf("More!\n");
+		else if (result < 0)
+			printf("Less!\n");
+		else
+			printf("You win!\n");
+	}
 	return 0;
 }

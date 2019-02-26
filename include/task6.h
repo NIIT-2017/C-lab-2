@@ -1,6 +1,6 @@
-#ifndef TASK6_H
-#define TASK6_H
+#ifndef TASK_6
+#define TASK_6
 
-char * clear(char * line);
+char* clear(char *line);
 
 #endif

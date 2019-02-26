@@ -1,14 +1,16 @@
 #include <stdio.h>
-#include "task5.h"
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
+#include "task5.h"
+#define NUM_OF_PASS 10
 
 int main()
 {
-	char line[10];
 	srand(time(0));
-	for (int j = 0; j < 10; j++)
-		printf("%s\n", password(line));
-
+	char buf[10];
+	for (int i = 0; i < NUM_OF_PASS; ++i)
+	{
+		printf("%s\n", password(buf));
+	}
 	return 0;
 }

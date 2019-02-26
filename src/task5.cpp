@@ -1,26 +1,19 @@
 #include <stdlib.h>
-#define length 8
+#include "task5.h"
 
+#define LENGHT_OF_PASS 8 
 
-char * password(char * line)
+char* password(char *line)
 {
-	int i, k, exch;
-
-	for (i = 0; i < length / 3; i++)
-		line[i] = rand() % ('Z' - 'A' + 1) + 'A';
-	for (; i >= length / 3 && i < 2 * length / 3; i++)
-		line[i] = rand() % ('9' - '0' + 1) + '0';
-	for (; i >= 2 * length / 3 && i < length; i++)
-		line[i] = rand() % ('z' - 'a' + 1) + 'a';
-	for (int j = 0; j < length; j++)
+	for (int i = 0; i < LENGHT_OF_PASS; ++i)
 	{
-		k = rand() % length;
-		exch = line[k];
-		line[k] = line[length - 1 - k];
-		line[length - 1 - k] = exch;
+		switch (rand() % 3)
+		{
+		case 0: line[i] = '0' + rand() % ('9' - '0' + 1); break;
+		case 1: line[i] = 'a' + rand() % ('z' - 'a' + 1); break;
+		case 2: line[i] = 'A' + rand() % ('Z' - 'A' + 1); break;
+		}
 	}
-
-	line[length] = '\0';
-
+	line[LENGHT_OF_PASS] = '\0';
 	return line;
 }

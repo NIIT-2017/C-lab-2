@@ -1,24 +1,24 @@
-#include "task1.h"
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <stdlib.h>
-#include <Windows.h>
-
+#include <time.h>
+#include "task1.h"
 
 
 int main()
 {
-	int startH = 0;
-	int t = 0;
-	printf("Enter the start height:", startH);
-	scanf("%d", &startH);
-	while (height(t, startH) > 0)
+	int startHeight = 0;
+	int t;
+	printf("Enter with a start height of fall of the bomb, H \n");
+	scanf("%d", &startHeight);
+	t = 0;
+	while (height(t, startHeight) > 0)
 	{
-		printf("t=%dc   h=%.1fm\n", t, height(t, startH));
-		t = t + 1;
-		Sleep(1000);
+		printf("t=%02d c h=%2.1f m\n", t, height(t, startHeight));
+		unsigned int retTime = time(0) + 1;
+		while (time(0) < retTime);
+		t++;
 	}
-	printf("Babah!!!\n");
+	printf("BABAH!!!");
 
 	return 0;
 }

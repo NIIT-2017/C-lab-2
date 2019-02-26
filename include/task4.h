@@ -1,6 +1,6 @@
-#ifndef TASK4_H
-#define TASK4_H
+#ifndef TASK_4
+#define TSAK_4
 
-char* process(char* line);
+char* process(char *line);
 
 #endif

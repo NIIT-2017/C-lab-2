@@ -1,6 +1,6 @@
-#ifndef TASK5_H
-#define TASK5_H
+#ifndef TASK_5
+#define TASK_5
 
-char * password(char * line);
+char* password(char *line);
 
 #endif

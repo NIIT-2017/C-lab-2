@@ -1,40 +1,28 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#define N 256
+#include <string.h>
 
 int main()
 {
-	char str[N];
-	int pres_str[N] = { 0 };
-	char buf[N] = { 0 };
-	buf[0] = '\0';
-	int count[N] = { 0 };
-	int j = 0;
-	int k = 0;
+	float freq[256];
+	int lenght;
+	char str[256];
+	char *pstr = str;
 	printf("Enter a string: ");
-	fgets(str, N, stdin);
-	for (j; str[j] != '\n'; j++)
-		;
-	str[j] = '\0';
-	j = 0;
-	for (int i = 0; str[i] != '\0'; i++)
+	scanf("%s", str);
+	lenght = strlen(str);
+	for (int i = 0; i < 256; ++i)
 	{
-		if (pres_str[str[i]] != 0)
-		{
-			while (str[i] != buf[k])
-				k++;
-			count[buf[k]]++;
-		}
-		else if (pres_str[str[i]] == 0)
-		{
-			buf[j] = str[i];
-			pres_str[str[i]] = 1;
-			count[buf[j]]++;
-			j++;
-		}
+		freq[i] = 0;
 	}
-	buf[j + 1] = '\0';
-	for (int i = 0; buf[i] != '\0'; i++)
-		printf("%c-%d\n", buf[i], count[buf[i]]);
+	while (*pstr)
+	{
+		freq[*pstr++] += 1.0 / lenght;
+	}
+
+	for (int i = 0; i < 256; ++i)
+	{
+		if (freq[i])
+			printf("%c - %f\n", i, freq[i]);
+	}
 	return 0;
 }

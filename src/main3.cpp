@@ -1,18 +1,15 @@
-#include "task3.h"
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include "task3.h"
 
 int main()
 {
-	int line = 1;
-	int count;
+	int num_of_str = 0;
 	char buf[256];
-	printf("Enter a count of line of the triangle: ");
-	scanf("%d", &count);
-	for (line = 1; line <= count; line++)
+	printf("Enter the num of strings:");
+	scanf("%d", &num_of_str);
+	for (int i = 0; i < num_of_str; ++i)
 	{
-		layout(buf, line, count);
-		printf("%s\n", buf);
+		printf("%s\n", layout(buf, i, num_of_str));
 	}
 	return 0;
 }
