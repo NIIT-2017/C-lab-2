@@ -4,7 +4,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-char main()
+int main()
 {
 	char line[10];
 	srand(time(NULL));
