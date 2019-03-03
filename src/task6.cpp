@@ -5,7 +5,7 @@ char * clear(char * line)
 	int sizeOfstring = strlen(line);
 	if (line[sizeOfstring - 1] == '\n') line[sizeOfstring - 1] = '\0';
 	int countSFspaces = 0; // counting superfluous spaces 
-	int flag = 1; // 0 - ausserhalb des Wortes , 1 - innerhalb des Wortes
+	int flag = 0; // 0 - ausserhalb des Wortes , 1 - innerhalb des Wortes
 	for (int i = 0; i < sizeOfstring - 1; i++)
 	{
 		
