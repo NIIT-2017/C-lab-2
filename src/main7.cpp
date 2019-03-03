@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <Windows.h>
 #define N 255
 
 int main()
@@ -30,7 +29,6 @@ int main()
 			buf[line[i]] = 0;
 		}
 
-		Sleep(1000);
 	}
 	return 0;
 }
