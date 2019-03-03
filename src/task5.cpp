@@ -9,20 +9,16 @@ char * password(char * line)
 	
 	for (int i = 0; i < N; i++)
 	{
-		int randChar = rand() % 4;
-		switch (randChar)
-		{
-		case 1:
-			line[i] = rand() % ('9' - '0' + 1) + '0';
-			break;
-		case 2:
+		int randomise = rand() % 3;
+		if (randomise == 0)
 			line[i] = rand() % ('z' - 'a' + 1) + 'a';
-			break;
-		case 3:
+		else if (randomise == 1)
+			line[i] = rand() % ('9' - '0' + 1) + '0';
+		else if (randomise == 2)
 			line[i] = rand() % ('Z' - 'A' + 1) + 'A';
-			break;
-		}
 	}
+	
+	
 		line[N] = '\0';
 
 	return line;
