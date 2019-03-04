@@ -9,5 +9,6 @@ int main()
 	printf("Please, enter any text to get rid off superfluous spaces\n");
 	fgets(inStr, N, stdin);
 	printf("%s\n",clear(inStr));
+	putchar('\n');
 	return 0;
 }

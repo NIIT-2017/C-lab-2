@@ -35,7 +35,7 @@ char * clear(char * line)
 		{
 			line[(sizeOfstring - 1) - countSFspaces] = '\0';
 		}
-	;
+	
 
 
 	return line;
