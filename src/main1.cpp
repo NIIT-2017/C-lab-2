@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<windows.h>
-#include"Task1.h"
+#include"task1.h"
 
 int main()
 {
