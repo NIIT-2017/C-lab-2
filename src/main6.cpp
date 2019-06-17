@@ -1,4 +1,3 @@
-#include "pch.h"
 #include <stdio.h>
 # define N 256
 #include "task6.h"
