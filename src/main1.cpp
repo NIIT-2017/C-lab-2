@@ -1,4 +1,3 @@
-#include "pch.h"
 #include <stdio.h>
 #include <time.h>
 #include "task1.h"
