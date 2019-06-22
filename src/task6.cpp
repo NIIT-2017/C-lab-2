@@ -19,7 +19,7 @@ char * clear(char * line)
 				line[j] = line[j + 1];
 	}
 			
-	while (line[length - 1] == ' ' || line[length - 1] == '\n')
+	while (line[length - 1] == ' ')
 		line[length - 1] = '\0';
 	   		
 	return line;
