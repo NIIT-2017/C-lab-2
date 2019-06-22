@@ -19,8 +19,8 @@ char * clear(char * line)
 				line[j] = line[j + 1];
 	}
 			
-	if (line[length - 1] == ' ' || line[strlen(line) - 1] == '\n')
-		line[length - 1] = '\0';
+	if (line[strlen(line) - 1] == ' ' || line[strlen(line) - 1] == '\n')
+		line[strlen(line) - 1] = '\0';
 		
 	   		
 	return line;
