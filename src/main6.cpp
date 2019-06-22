@@ -8,7 +8,8 @@ int main()
 	printf("Enter words or letters with spaces: ");
 	fgets(line, N, stdin);
 
-	printf(clear(line));
+	clear(line);
+	puts(line);
 
 	return 0;
 }
