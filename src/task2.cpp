@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
-
 int turn(int value, int secret)
 {
 		if (secret > value)
