@@ -3,7 +3,7 @@
 
 int main()
 {
-    char line[9] = { 0 };
+    char line[512];
 
     for (int c = 0; c < 10; c++)
     {

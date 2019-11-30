@@ -4,7 +4,7 @@
 int main()
 {
     int count = 0;
-    char buf[256] = {0};
+    char buf[256];
 
     printf("What is the pyramid's size?\n");
     scanf("%i", &count);

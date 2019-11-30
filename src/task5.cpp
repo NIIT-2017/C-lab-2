@@ -33,7 +33,7 @@ char GiveSymbol(short option)
 
 char* password(char* line)
 {
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < 9; i++)
     {
         line[i] = '\0';
     }
@@ -58,34 +58,3 @@ char* password(char* line)
 
     return line;
 }
-
-//char GiveSymbol(short option)
-//{
-//    switch (option)
-//    {
-//    case 0:
-//        return GiveUppercase();
-//        break;
-//    case 1:
-//        return GiveLowercase();
-//        break;
-//    case 2: 
-//        return GiveNumber();
-//        break;
-//    }
-//}
-//
-//char GiveUppercase()
-//{
-//    return (char)(rand() % 26 + 65);
-//}
-//
-//char GiveLowercase()
-//{
-//    return (char)(rand() % 26 + 97);
-//}
-//
-//char GiveNumber()
-//{
-//    return (char)(rand() % 11 + 48);
-//}
