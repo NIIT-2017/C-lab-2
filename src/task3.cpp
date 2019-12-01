@@ -9,5 +9,6 @@ char* layout(char buf[], int line, int count)
         buf[i] = ' ';
     for (int i = spacecount; i <= linelength - 1; i++)
         buf[i] = '*';
+    buf[linelength] = '\0';
     return buf;
 }

@@ -5,6 +5,9 @@
 
 int main()
 {
+    time_t now;
+    time(&now);
+    srand(now);
     char line[9] = { 0 };
     for (int i = 0; i < 10; i++)
     {

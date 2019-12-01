@@ -5,9 +5,6 @@
 
 char* password(char* line)
 {
-    time_t now;
-    time(&now);
-    srand(now);
     for (int i = 0; i < 8; i++)
     {
         int flag = rand() % 3;
@@ -18,5 +15,6 @@ char* password(char* line)
         else
             line[i] = rand() % ('z' - 'a' + 1) + 'a';
     }
+    line[8] = '\0';
     return line;
 }
