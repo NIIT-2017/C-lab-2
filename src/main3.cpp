@@ -11,7 +11,7 @@ int main()
      
     printf("Input hight: ");
     scanf("%d", &count);  
-    puts("");
+   
     for (line = 1; line <= count; line++)
     {
         puts(layout(buf, line, count));
