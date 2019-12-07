@@ -12,6 +12,6 @@ char* layout(char buf[], int line, int count)
         else
             buf[i] = ' ';
     }
-    
+    buf[count+line-1]='\0';
     return buf;
 }
