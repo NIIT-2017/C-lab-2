@@ -7,7 +7,7 @@ char* layout(char buf[], int line, int count)
     
     for (int i=0;i<count+line;i++)
     {
-        if (i >= count - line+1 && i <= count + line-1)
+        if (i >= count - line && i <= count + line-2)
             buf[i] = '*';
         else
             buf[i] = ' ';
