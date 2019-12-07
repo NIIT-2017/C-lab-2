@@ -10,7 +10,7 @@ char random(int r)
     switch (r)
     {
     case 0:
-        return rand() % ('Z' - 'A'+1)+ 'A';
+        return rand() % ('z' - 'a'+1)+ 'a';
     case 1:
         return rand() % ('9' - '0'+1)+ '0';
     }
