@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
-#include <windows.h>
 
 char* password(char* line) {
     int random = 0;
