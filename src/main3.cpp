@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define N 128
+#define N 256
 #include <stdio.h>
 #include "task3.h"
 
