@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "task5.h"
 #include <stdlib.h>
+#define N 11
 
 char random(char r)
 {
