@@ -19,18 +19,20 @@ int main()
         srand(now);
         int secret = rand() % secret_max;
         
-        while (value != secret)
+        while (turn(value, secret) != 0)
         {
             switch (turn(value, secret))
             {
             case 1:
                 printf("Input lower value\n");
+                scanf("%d", &value);
                 break;
             case -1:
                 printf("Input greater value\n");
+                scanf("%d", &value);
                 break;
             }
-            scanf("%d", &value);
+            
         }
         printf("Guessed!");
     }
