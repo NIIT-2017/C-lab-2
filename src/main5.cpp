@@ -3,11 +3,10 @@
 #include "task5.h"
 #include <time.h>
 #include <stdlib.h>
-#define N 11
 
 int main()
 {
-    char line[N] = { 0 };
+    char line[11] = { 0 };
     
     time_t now;
     time(&now);
