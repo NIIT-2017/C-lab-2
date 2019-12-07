@@ -6,7 +6,7 @@
 
 int main()
 {
-    char line[11] = { 0 };
+    char line[9] = { 0 };
     
     time_t now;
     time(&now);
