@@ -13,7 +13,7 @@ int main()
     srand(now);
        
     for (int k = 1; k < 11; k++)
-        printf("Your password #%02d: %s \n",k, password(line));
+        printf(%s\n, password(line));
     
     return 0;
 }
