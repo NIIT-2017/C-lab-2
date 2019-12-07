@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "task5.h"
 #include <stdlib.h>
-#define N 11
 
 char random(char r)
 {
@@ -21,12 +20,12 @@ char random(char r)
 
 char* password(char* line)
 {
-    for(int i=0; i<11; i++)
+    for(int i=0; i<9; i++)
     {
         char r = rand() % ('2' - '0' + 1) + '0';
         line[i] = random(r);
     }
-    line[11-1] = '\0';
+    line[9-1] = '\0';
     
     return line;
 }
