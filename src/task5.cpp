@@ -21,12 +21,12 @@ char random(char r)
 
 char* password(char* line)
 {
-    for(int i=0; i<N; i++)
+    for(int i=0; i<11; i++)
     {
         char r = rand() % ('2' - '0' + 1) + '0';
         line[i] = random(r);
     }
-    line[N-1] = '\0';
+    line[11-1] = '\0';
     
     return line;
 }
