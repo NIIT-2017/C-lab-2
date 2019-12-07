@@ -25,7 +25,7 @@ char* password(char* line)
         char r = rand() % ('2' - '0' + 1) + '0';
         line[i] = random(r);
     }
-    line[9-1] = '\0';
+    line[SIZE-1] = '\0';
     
     return line;
 }
