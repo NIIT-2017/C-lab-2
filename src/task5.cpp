@@ -20,14 +20,12 @@ char random(char r)
 
 char* password(char* line)
 {
-    for(int i=0; i<8; i++)
+    for(int i=0; i<N; i++)
     {
-        if (((line[i] > '9') && (line[i] < 'A')) || ((line[i] > 'Z') &&( line[i] < 'a')))
-        {
-            char r = rand() % ('2' - '0' + 1) + '0';
-            line[i] = random(r);
-        }
-        line[8] = '\0';
+        char r = rand() % ('2' - '0' + 1) + '0';
+        line[i] = random(r);
     }
+    line[N-1] = '\0';
+    
     return line;
 }
