@@ -7,7 +7,7 @@ char* layout(char buf[], int line, int count)
 		else if (i<(count-line)) buf[i] = ' ';
 		else
 		{
-			break;
+		putchar('\0');
 		}
 	}
 	return buf;

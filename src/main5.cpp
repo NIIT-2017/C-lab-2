@@ -1,7 +1,8 @@
-#include "task5.h"
+﻿#include "task5.h"
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <string.h>
 int main()
 {
 	time_t now;
