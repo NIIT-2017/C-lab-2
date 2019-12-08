@@ -8,11 +8,11 @@ int main()
 	time_t now;
 	time(&now);
 	srand(now);
-	char str[512];
+	char str[256];
 	for (int a = 0; a < 10; a++)
 	{
-		password(str);
-		putchar('\n');
+		printf("%s",password(str));
+		printf("\n");
 	}
 	return 0;
 }
