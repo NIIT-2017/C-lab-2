@@ -6,7 +6,7 @@ char* password(char* line)
 {
 	int i = 0;
 	int j = 0;
-	while (i<strlen(line))
+	while (i<9)
 	{
 		if (i >= 8)
 		{
