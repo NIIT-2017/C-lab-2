@@ -7,7 +7,7 @@ int main()
 	time_t now;
 	time(&now);
 	srand(now);
-	char str[8] = { 0 };
+	char str[256] = {};
 	for (int a = 0; a < 10; a++)
 	{
 		password(str);
