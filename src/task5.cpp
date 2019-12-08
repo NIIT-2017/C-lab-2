@@ -1,16 +1,24 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <string.h>
 char* password(char* line)
 {
 	int i = 0;
 	int j = 0;
 	char num = 0;
-	while (line[i]!='\0')
+	while (i<strlen(line))
 	{
-		j =rand() % 3;
-		switch (j)
+		if (i >= 8)
 		{
+			line[i] = '\0';
+			i++;
+		}
+		else
+		{
+			j = rand() % 3;
+			switch (j)
+			{
 			case 0:
 				num = 48 + rand() % (57 - 48 + 1);
 				line[i] = num;
@@ -29,9 +37,8 @@ char* password(char* line)
 				printf("%c", line[i]);
 				i++;
 				break;
+			}
 		}
-		if (i >= 8)
-			line[i] = '\0';
 	}
 	return line;
 }
