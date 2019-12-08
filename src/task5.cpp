@@ -6,7 +6,7 @@ char* password(char* line)
 	int i = 0;
 	int j = 0;
 	char num = 0;
-	while (i<8)
+	while (line[i]!='\0')
 	{
 		j =rand() % 3;
 		switch (j)
@@ -30,6 +30,8 @@ char* password(char* line)
 				i++;
 				break;
 		}
+		if (i >= 8)
+			line[i] = '\0';
 	}
 	return line;
 }
