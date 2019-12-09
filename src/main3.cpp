@@ -8,10 +8,9 @@ int main()
 	int result = scanf("%d", &crows);
 	int i = 0;
 	char buf[256];
+
 	for (i = 1; i <= crows; i++)
-	{
 		printf("%s\n", layout(buf, i, crows));
-	}
 
 	return 0;
 }
