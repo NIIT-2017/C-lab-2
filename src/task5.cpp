@@ -7,7 +7,7 @@
 char *password(char *line)
 {
    int i;
-   for(i = 0; i < 8; i++)
+   for(i = 0; i < 9; i++)
    {
       int ran = rand () % 3;
         if(ran ==0)
@@ -17,6 +17,7 @@ char *password(char *line)
 	else
         printf("%c",line[i]=rand()%('Z'-'A'+1)+'A');
     }
+	line[8] = '\0';
 	printf("\n");
     return line;
 }
