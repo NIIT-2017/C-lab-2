@@ -1,0 +1,22 @@
+#include "task5.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+
+int main()
+{
+	time_t now;
+	time(&now);
+	srand(now);
+	rand();
+	char line[9] = { 0 };
+	int i = 0;
+
+	for (i = 0; i < 10; i++)
+	{
+		printf("%s\n", password(line));
+	}
+	
+	return 0;
+}
