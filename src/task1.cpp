@@ -1,6 +1,7 @@
 #include "task1.h"
 #include<stdio.h>
-#include<Windows.h>
+#include <stdlib.h>
+#include<time.h>
 
 float height(int currTime, int startHeight)
 {
@@ -13,7 +14,8 @@ float height(int currTime, int startHeight)
      if(height < 0)
         return -1;
      printf("t = %d from h= %.1f m\n",time,height);
-     Sleep(1000);
+     clock_t begin = clock();
+	  while (clock() < begin + CLOCKS_PER_SEC / 5);
      time++;
    }
    return height;
