@@ -22,8 +22,9 @@ char *clear(char *line)
        
       while (line[size - 1] == ' ')
 	{
-		if (line[size - 1] == ' ')
-			line[size - 1] = '\0';
+		
+	      line[size - 1] = '\0';
+	      size--;
 	}
 
 
