@@ -19,9 +19,13 @@ char *clear(char *line)
 	     for(int k = j; k< size;k++)
 		line[k]=line[k+1];
        }
+       
+      while (line[size - 1] == ' ')
+	{
+		if (line[size - 1] == ' ')
+			line[size - 1] = '\0';
+	}
 
-       if(line[size-1]==' ')
-	  line[size-1]='\0';
 
        return line;
 }
