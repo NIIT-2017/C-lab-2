@@ -11,9 +11,9 @@ int main()
 
 
     for (;line <= count;line++){
-        puts(layout(buf,line,count));
+        printf("%s",layout(buf,line,count));
+        printf("\n");
     }
-
     return 0;
 }
 
