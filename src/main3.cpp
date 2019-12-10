@@ -7,12 +7,12 @@ int main()
 {
 
     char buf[256];
-    int lines = 1,count = 0;
+    int count = 0;
     printf("Enter number of lines!\n");
     scanf("%d",&count);
-     for (int line = 1; line <= count; line++)
+     for (int lines = 1; lines <= count; lines++)
 	{
-		printf("%s\n", layout(buf, line, count));
+		printf("%s\n", layout(buf, lines, count));
 	}
     return 0;
 }
