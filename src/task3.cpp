@@ -4,19 +4,20 @@
 char *layout(char buf[], int lines,int count)
 {
   
-   int i , j;
+   int i;
+   int star=(line * 2) - 1;
    int space = count-1;
+   int totalcount = space + star;
 
-   for(i = 0; i < count;space--,lines++,i++)
-   {
-	   buf[i] = '*', buf[i+1] = ' ';
-       for(int k = 0; k < space;k++)
-	       printf("%c",buf[i+1]);
-	for(j= 0 ; j < lines; j++)
-	printf("%c",buf[i]);
-	printf("\n");
-	lines++;
-    }
+     for ( i = 0; i < totalcount; i++)
+	{
+	     if (i < space)
+
+	       buf[i] = ' ';
+	      else
+		buf[i] = '*';
+	}
+  
 	buf[i] = '\0';
     return buf;
 }
