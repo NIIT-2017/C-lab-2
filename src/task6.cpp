@@ -20,10 +20,10 @@ char *clear(char *line)
 		line[k]=line[k+1];
        }
        
-      while (line[size - 1] == ' ')
+      while (line[size] == ' ' || line[size]=='\0')
 	{
 		
-	      line[size - 1] = '\0';
+	      line[size] = '\0';
 	      size--;
 	}
 
