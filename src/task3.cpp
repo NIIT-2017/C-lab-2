@@ -3,21 +3,21 @@
 
 char *layout(char buf[], int lines,int count)
 {
-   buf[0]='*',buf[1]=' ';
+  
    int i , j;
    int space = count-1;
 
    for(i = 0; i < count;space--,lines++,i++)
    {
+	   buf[i] = '*', buf[i+1] = ' ';
        for(int k = 0; k < space;k++)
-	       printf("%c",buf[1]);
+	       printf("%c",buf[i+1]);
 	for(j= 0 ; j < lines; j++)
-	printf("%c",buf[0]);
+	printf("%c",buf[i]);
 	printf("\n");
 	lines++;
     }
-	buf[0] = '\0';
-	buf[1] = '\0';
+	buf[i] = '\0';
     return buf;
 }
 
