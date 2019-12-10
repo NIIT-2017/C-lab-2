@@ -9,7 +9,7 @@ int main()
     printf("Введите количетсво строк стреугольника (целое число)\n");
     scanf("%d",&count);
 
-    char * layout(char buf[],int line,int count);
+
     for (;line <= count;line++){
         puts(layout(buf,line,count));
     }
