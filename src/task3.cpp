@@ -3,7 +3,7 @@
 
 char *layout(char buf[], int lines,int count)
 {
-   buf[0]='*',buf[1]=32;
+   buf[0]='*',buf[1]=' ';
    int i , j;
    int space = count-1;
 
@@ -16,6 +16,8 @@ char *layout(char buf[], int lines,int count)
 	printf("\n");
 	lines++;
     }
+	buf[0] = '\0';
+	buf[1] = '\0';
     return buf;
 }
 
