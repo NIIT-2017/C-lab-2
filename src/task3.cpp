@@ -9,10 +9,6 @@ void clean_stdin(void) {
 
 char* layout(char buf[], int line, int count) {
 	
-	//printf("line = %d, count = %d\n", line, count);
-	//printf("count - line = %d\n", count - line);
-	//printf("2 * line - 1 = %d\n", 2 * line - 1);
-
 	//printf("buf = %p\n", buf);
 	int i = 0;
 
@@ -31,18 +27,8 @@ char* layout(char buf[], int line, int count) {
 		}
 
 		//sprintf(&buf[i], "%c", '\0');
-		//i++;
 	}
 	//printf("%s\n", buf);
-
-	/*for(int j = 0; j < count - line; j++) {
-		printf("%c", ' ');
-	}
-
-	for(int k= 0; k < 2 * line - 1; k++) {
-		printf("%c", '*');
-	}
-	printf("\n");*/
 
 	return buf;
 }

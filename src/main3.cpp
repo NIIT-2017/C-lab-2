@@ -3,7 +3,6 @@
 int main() {
 	setlocale(LC_ALL, "russian");
 
-	//char buf[];
 	int count = 0;
 	char* out = 0;
 
