@@ -1,4 +1,5 @@
 #include "task6.h"
+
 #define printf //
 
 void clean_stdin(void) {
@@ -7,8 +8,6 @@ void clean_stdin(void) {
 		c = getchar();
 	} while (c != '\n' && c != EOF);
 }
-
-//	httline://www.cyberforum.ru/c-beginners/thread294021.html
 
 char* clear(char* line) {
 	printf("start_line = %s\n", line);

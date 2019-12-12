@@ -5,8 +5,6 @@
 #define BUF 512
 #define BUFRES 256
 
-// https://www.programmersforum.ru/showthread.php?t=45074
-// http://school30.spb.ru/csd/ogt/samp/c_task_004.htm
 
 int main() {
 	setlocale(LC_ALL, "russian");

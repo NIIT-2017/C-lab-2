@@ -9,8 +9,6 @@ int main() {
 	time_t now;
 	time(&now);
 	srand(now);
-	//rnd = rand();
-	//printf("secret = %d\n", secret = (rnd % 100 + 1));
 	secret = (rand() % 100 + 1);
 
 	while (1) {

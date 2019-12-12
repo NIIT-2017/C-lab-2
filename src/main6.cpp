@@ -6,16 +6,7 @@ int main() {
 	char str[BUF] = { 0 };
 	char* pstr = 0;
 
-	//while (1) {
-	//	printf("Для выхода нажмите x: ");
-	//	char type = getchar();
 
-	//	if (type == 'x') {
-	//		printf("Выход!\n");
-	//		clean_stdin();
-	//		break;
-	//	}
-	//	else {
 			printf("Введите строку: ");
 			fgets(str, BUF, stdin);
 
@@ -28,8 +19,6 @@ int main() {
 			pstr = clear(str);
 			printf("clear = %s\n", pstr);
 			printf("strlen(clear) = %d\n", strlen(pstr));
-	/*	}
-	}*/
 
 	return 0;
 }
