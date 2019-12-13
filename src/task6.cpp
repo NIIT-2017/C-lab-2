@@ -2,7 +2,7 @@
 
 #define printf //
 
-void clean_stdin(void) {
+static void clean_stdin(void) {
 	int c;
 	do {
 		c = getchar();

@@ -10,5 +10,5 @@
 #define MIN 48
 #define MAX 122
 
-void clean_stdin(void);
+// void clean_stdin(void);
 char* password(char* line);

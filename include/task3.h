@@ -5,5 +5,5 @@
 #include <math.h>
 #include <stdlib.h>
 
-void clean_stdin(void);
+// void clean_stdin(void);
 char* layout(char buf[], int line, int count);

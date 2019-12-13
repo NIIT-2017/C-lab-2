@@ -5,5 +5,5 @@
 
 #define BUF 512
 
-void clean_stdin(void);
+// void clean_stdin(void);
 char* clear(char* line);

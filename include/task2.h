@@ -5,5 +5,5 @@
 #include <math.h>
 #include <stdlib.h>
 
-void clean_stdin(void);
+// void clean_stdin(void);
 int turn(int value, int secret);

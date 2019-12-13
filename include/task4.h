@@ -3,5 +3,5 @@
 #include <clocale>
 #include <stdlib.h>
 
-void clean_stdin(void);
+// void clean_stdin(void);
 char* process(char* line);

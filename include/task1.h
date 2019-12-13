@@ -4,5 +4,5 @@
 #include <time.h>
 #include <math.h>
 
-void clean_stdin(void);
+// void clean_stdin(void);
 float height(int currTime, int startHeight);
