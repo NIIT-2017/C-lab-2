@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "task5.h"
-int main5()
+int main()
 {
     char buf[50];
     buf[49] = '\0';

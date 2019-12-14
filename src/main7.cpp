@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main()
+int main7()
 {
     int freq[128];
     for (int i = 0; i < 128; i++)
@@ -16,4 +16,5 @@ int main()
         if(freq[i]>0)
         printf("%c %d\n", i, freq[i]);
     }
+    return 0;
 }

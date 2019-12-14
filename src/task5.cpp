@@ -1,4 +1,5 @@
 #include "task5.h"
+#include <string.h>
 char* password(char* line)
 {
     srand(time(NULL));
