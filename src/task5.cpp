@@ -25,8 +25,9 @@ char* password(char* line) {
 			i--;
 		}
 	}
-	line[strlen(line)] = '\0';	// должен быть 0, иначе идёт заполнение буфера до 512
-	//printf("длина line = %d\n", strlen(line));
+	line[8] = '\0';	// должен быть 0, иначе идёт заполнение буфера до 512
+	printf("длина line = %d\n", strlen(line));
+	printf("последний символ в строке пароля = %c\n", line[strlen(line)]);
 
 	return line;
 }
