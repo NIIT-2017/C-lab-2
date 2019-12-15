@@ -1,6 +1,6 @@
 #include "task5.h"
 
-static void clean_stdin(void) {
+void clean_stdin(void) {
 	int c;
 	do {
 		c = getchar();
@@ -25,6 +25,8 @@ char* password(char* line) {
 			i--;
 		}
 	}
-	//printf("line = %s\n", line);
+	line[strlen(line)] = '\0';	// должен быть 0, иначе идёт заполнение буфера до 512
+	//printf("длина line = %d\n", strlen(line));
+
 	return line;
 }
