@@ -4,6 +4,11 @@
 
 char* password(char* line)
 {
+	time_t now;
+	time(&now);
+	srand(now);
+	rand();
+
 	int i = 0, random = 0;
 	char a, b, c;
 
@@ -15,19 +20,18 @@ char* password(char* line)
 
 		random = 1 + rand() %3;
 		
-		if (random == 1)
+		if (random == 1 || i == 1)
 			line[i] = a;
 
-		else if (random == 2)
+		else if (random == 2 || i == 3)
 			line[i] = b;
 
-		else if (random == 3)
+		else if (random == 3 || i == 5)
 			line[i] = c;
 		
 		i++;
 	}
 	
-
 	line[i] = '\0';
 
 	return line;

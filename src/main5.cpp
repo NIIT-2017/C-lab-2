@@ -4,11 +4,6 @@
 
 int main()
 {
-	time_t now;
-	time(&now);
-	srand(now);
-	rand();
-
 	printf("Output 10 random passwords:\n");
 
 	int i = 0;
