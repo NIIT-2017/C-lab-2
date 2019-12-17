@@ -1,12 +1,12 @@
 #include"task4.h"
 #include<stdio.h>
-#include<time.h>
+#include<string.h>  //for strlen
 
 char*process(char*line)
 {
 	int i = 0;
-	int j = SIZE - 2;       //becouse j-1 == "\0"
-	char ch;               //this is temporary symbol storage
+	int j = strlen(line)-1;   //j value change    
+	int ch;               //this is temporary symbol storage, correct type of 'ch'
 
 	while (i < j)
 	{
