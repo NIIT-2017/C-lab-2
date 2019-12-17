@@ -9,6 +9,7 @@ char * layout(char buf[], int line, int count)
 		buf[k]=' ';
 	for (int j = 1; j <= (line * 2 - 1); j++, k++)//It's for '*'.
 		buf[k] = '*';
+	buf[k]='\0';
 	
 	return buf;
 }
