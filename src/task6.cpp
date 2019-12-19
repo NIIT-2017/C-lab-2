@@ -4,37 +4,30 @@
 
 char*clear(char*line)
 {
-	int i = 0;          //It's a line character number.
-	int flag = 0;       //It's a flag for word designation.
+	int i = 0;          
+	int j = strlen(line) - 1;
 
-	while (line[i])     //It's for deletion ' ' in line's end.
-	{
-		if (line[strlen(line) - 1] == ' ')
-			line[strlen(line) - 1] = '\0';
-		else
-			break;
-	}
+	while (line[j] == ' ' && j >= 0)  //delit ' ' in end of line
+        {
+	   line[j] = '\0';
+	   j--;
+        }
 
-	while (line[i])  
-	{
-		if (line[i] == ' ' && flag == 0)       //It's for deletion ' ' in line's start.
-			;
-		else if (line[i] != ' ' && flag == 0)
-		{
-			flag = 1;
-			putchar(line[i]);
-		}
+        while (line[i] == ' ')   //delit ' ' in start line
+        {
+	     for (int k = 0; k <= j; k++)   
+		  line[k] = line[k + 1]; //translation uor line by one array cell
+        }
 
-		else if (line[i] != ' ' && flag == 1)
-			putchar(line[i]);
-
-		else if (line[i] == ' ' && flag == 1)   //It's for deletion ' ' between words.
-		{
-			flag = 0;
-			putchar(line[i]);
-		}
-		i++;
-	}
+        while (line[i])  //delit ' ' in the line
+        {
+	     if (line[i] == ' ' && line[i + 1] == ' ')
+	     {
+		  for (int z = i; z <=(strlen(line) - 1); z++)    
+			line[z] = line[z + 1]; 
+	     }
+	     else i++;
+        }
 	
 	return line;                                //It's a return result.
 }
