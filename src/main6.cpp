@@ -12,7 +12,6 @@ int main()
 	if (line[strlen(line) - 1] == '\n')  // It's a change of '\n' to '\o' in the line's end.
 		line[strlen(line) - 1] = '\0';
 
-	clear(line); //to task6.cpp
-	printf("\n");
+	printf("%s", clear(line));
 	return 0;
 }
