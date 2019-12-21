@@ -1,13 +1,13 @@
 char* layout(char buf[], int line, int count)
 {
-    for (int i = count-1; i>=0; i--)
+    for (int i = 0; i<=count; i++)
     {
-        if (i-line>0 )
+        if (i>count-(line*2-1))
             buf[i] = '*';
         else
             buf[i] = ' ';
 
     }
-    buf[count] = '\0';
+    buf[count+1] = '\0';
     return buf;
 }
