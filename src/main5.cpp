@@ -6,9 +6,9 @@
 
 int main()
 {
-	char line[9]; // инициализация массива под пароль
+	char line[9]; // ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї Г¬Г Г±Г±ГЁГўГ  ГЇГ®Г¤ ГЇГ Г°Г®Г«Гј
 	printf("here are the generated passwords for you:\n");
-	for (int i = 100; i; i--)
-		printf("%s\n", password(line)); //печать и вызов функции генерации пароля
+	for (int i = 10; i; i--)
+		printf("%s\n", password(line)); //ГЇГҐГ·Г ГІГј ГЁ ГўГ»Г§Г®Гў ГґГіГ­ГЄГ¶ГЁГЁ ГЈГҐГ­ГҐГ°Г Г¶ГЁГЁ ГЇГ Г°Г®Г«Гї
 	return 0;
 }
