@@ -1,6 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <Windows.h>
 #include "task1.h"
 
 void clean_stdin(void)
@@ -40,7 +39,6 @@ int main()
 			break;
 		}
 		currtime++;
-		Sleep(1000);
 	}
 
 	return 0;
