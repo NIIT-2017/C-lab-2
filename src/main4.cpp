@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <Windows.h>
 #include "task4.h"
 
-char* generateline(char* line) // генерируем случайную строку
+char* generateline(char* line) // ГЈГҐГ­ГҐГ°ГЁГ°ГіГҐГ¬ Г±Г«ГіГ·Г Г©Г­ГіГѕ Г±ГІГ°Г®ГЄГі
 {
 	int k = 0;
 	int i = 0;
@@ -38,8 +37,8 @@ int main()
 	char line[20];
 	for (int i = 5; i; i--)
 	{
-		printf("%s\n", generateline(line)); // генерируем
-		printf("%s\n\n", process(line)); // сортируем случайную строку
+		printf("%s\n", generateline(line)); // ГЈГҐГ­ГҐГ°ГЁГ°ГіГҐГ¬
+		printf("%s\n\n", process(line)); // Г±Г®Г°ГІГЁГ°ГіГҐГ¬ Г±Г«ГіГ·Г Г©Г­ГіГѕ Г±ГІГ°Г®ГЄГі
 	}
 	return 0;
 }
