@@ -7,7 +7,7 @@
 int main()
 {
 	srand(time(0));
-	char str[8] = { '0' };
+	char str[9] = { '0' };
 	for (int i = 0; i < 10; i++)
 	{
 		password(str);
@@ -17,5 +17,6 @@ int main()
 		}
 		puts("\n");
 	}
+
 	return 0;
 }

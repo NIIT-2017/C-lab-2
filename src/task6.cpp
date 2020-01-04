@@ -9,57 +9,34 @@ char* clear(char* line)
 		size++;
 	}
 
-	if (line[0] == ' ')
+	int k = 0;
+	while (line[k] == ' ')
 	{
-		int k = 0;
-		do
-		{
-			k++;
-		} while (line[k] == ' ');
-		line[0] = line[k];
-		
-		for (int i = 1; i < size-k; i++)
-		{
-			line[i] = line[i + k];
-		}
-		line[size-k] = '\0';
-		for (int i = 1; i < size - tmp; i++)
-		{
-			if ((line[i] == ' ') && (line[i + 1] == ' '))
-			{
-				for (int j = i; j < size - tmp; j++)
-				{
-					line[j] = line[j + 1];
-				}
-				tmp++;
-				i--;
-			}
-			line[size - tmp] = '\0';
-		}
-		if (line[size - tmp - 1] == ' ')
-		{
-			line[size - tmp - 1] = '\0';
-		}
+		k++;
 	}
-	else
+	for (int i = 0; i < size - k; i++)
 	{
-		for (int i = 1; i < size-tmp; i++)
-		{
-			if ((line[i] == ' ') && (line[i + 1] == ' '))
-			{
-				for (int j = i; j < size - tmp; j++)
-				{
-					line[j] = line[j + 1];
-				}
-				tmp++;
-				i--;
-			}
-			line[size - tmp] = '\0';
-		}
-		if (line[size - tmp - 1] == ' ')
-		{
-			line[size - tmp - 1] = '\0';
-		}
+		line[i] = line[i + k];
 	}
+	line[size - k] = '\0';
+	size = size - k;
+	for (int i = 1; i < size - tmp; i++)
+	{
+		if ((line[i] == ' ') && (line[i + 1] == ' '))
+		{
+			for (int j = i; j < size - tmp; j++)
+			{
+				line[j] = line[j + 1];
+			}
+ 			tmp++;
+			i--;
+		}
+		line[size - tmp] = '\0';
+	}
+	if (line[size - tmp - 2] == ' ')
+	{
+		line[size - tmp - 2] = '\0';
+	}
+
 	return line;
 }
