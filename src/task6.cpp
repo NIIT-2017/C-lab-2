@@ -33,9 +33,14 @@ char* clear(char* line)
 		}
 		line[size - tmp] = '\0';
 	}
-	if (line[size - tmp - 2] == ' ')
+	size = 0;
+	while (line[size] != '\0')
 	{
-		line[size - tmp - 2] = '\0';
+		size++;
+	}
+	if (line[size] == ' ')
+	{
+		line[size] = '\0';
 	}
 
 	return line;
