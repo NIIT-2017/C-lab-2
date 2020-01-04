@@ -20,6 +20,15 @@ char* clear(char* line)
 	}
 	line[size - k] = '\0';
 	size = size - k;
+
+	k = 0;
+	while (line[size - k - 1] == ' ')
+	{
+		k++;
+	}
+	line[size - k] = '\0';
+	size = size - k;
+
 	for (int i = 1; i < size - tmp; i++)
 	{
 		if ((line[i] == ' ') && (line[i + 1] == ' '))
@@ -32,15 +41,6 @@ char* clear(char* line)
 			i--;
 		}
 		line[size - tmp] = '\0';
-	}
-	size = 0;
-	while (line[size] != '\0')
-	{
-		size++;
-	}
-	if (line[size] == ' ')
-	{
-		line[size] = '\0';
 	}
 
 	return line;
