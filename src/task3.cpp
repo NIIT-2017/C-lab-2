@@ -1,13 +1,17 @@
 char* layout(char buf[], int line, int count)
 {
-    for (int i = 0; i<count; i++)
-    {
-        if (i>=count-(line*2-1))
-            buf[i] = '*';
-        else
-            buf[i] = ' ';
+    int numberOfStars = line * 2 - 1;
+    int numberOfGaps = (count * 2 - 1 - numberOfStars) / 2;
+    int i = 0;
 
+    for (i; i < numberOfGaps + numberOfStars; i++)
+    {
+        if (i < numberOfGaps)
+            buf[i] = ' ';
+        else
+            buf[i] = '*';
     }
-    buf[count] = '\0';
+
+    buf[i] = '\0';
     return buf;
 }
