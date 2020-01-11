@@ -21,6 +21,7 @@ char* password(char* line)
 			line[i] = 'a' + rand() % ('z' - 'a' + 1);
 	}
 	
+
 line[125] = '\0';
 
 return line;

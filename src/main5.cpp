@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h>
 #include "task5.h"
 
 int main()
@@ -17,5 +16,7 @@ int main()
 	for (int i = 0; i < 10; i++)
 		printf("%s\n", password(line));
 
+
        return 0;
+
 }
