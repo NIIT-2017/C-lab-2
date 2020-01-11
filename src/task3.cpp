@@ -16,7 +16,8 @@ char* layout(char buf[], int line, int count)
         else
             buf[i] = Star;
     }
-    buf[(gaps + stars) - 2] = '\0';
+    
+buf[(gaps + stars) - 2] = '\0';
 
 	return buf;
 }

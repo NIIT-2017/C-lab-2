@@ -17,5 +17,5 @@ int main()
 	for (int i = 0; i < 10; i++)
 		printf("%s\n", password(line));
 
-	return 0;
+       return 0;
 }
