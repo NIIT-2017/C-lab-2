@@ -2,33 +2,32 @@
 #include "task2.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include <time.h>
 
 
 int main()
 {
-	int value; //value введённое число
-	int	secret = 0;// переменные secret число загаданное случайной переменнойе
+	int value; //value ГўГўГҐГ¤ВёГ­Г­Г®ГҐ Г·ГЁГ±Г«Г®
+	int	secret = 0;// ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ secret Г·ГЁГ±Г«Г® Г§Г ГЈГ Г¤Г Г­Г­Г®ГҐ Г±Г«ГіГ·Г Г©Г­Г®Г© ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г®Г©ГҐ
 	int n;
-	int m = 0;//n условие
+	int m = 0;//n ГіГ±Г«Г®ГўГЁГҐ
 	
 	printf("Igra ygadai chislo\n");
 	printf("Computer zagadal chislo ot 1 do 100\n");
 	srand(time(NULL));
 
-	secret = rand() % 100 + 1; //число от 1 до 100
+	secret = rand() % 100 + 1; //Г·ГЁГ±Г«Г® Г®ГІ 1 Г¤Г® 100
 	
 		printf("Vvedite chislo i nagmite Enter\n");
 			
-		for (n = 0; n < 100; n++) //тут задаём условия turn = 0 это счётчик цикла, turn <100 условия продолжительности , turn++, продолжение счётчика с того места где мы остановились
+		for (n = 0; n < 100; n++) //ГІГіГІ Г§Г Г¤Г ВёГ¬ ГіГ±Г«Г®ГўГЁГї turn = 0 ГЅГІГ® Г±Г·ВёГІГ·ГЁГЄ Г¶ГЁГЄГ«Г , turn <100 ГіГ±Г«Г®ГўГЁГї ГЇГ°Г®Г¤Г®Г«Г¦ГЁГІГҐГ«ГјГ­Г®Г±ГІГЁ , turn++, ГЇГ°Г®Г¤Г®Г«Г¦ГҐГ­ГЁГҐ Г±Г·ВёГІГ·ГЁГЄГ  Г± ГІГ®ГЈГ® Г¬ГҐГ±ГІГ  ГЈГ¤ГҐ Г¬Г» Г®Г±ГІГ Г­Г®ГўГЁГ«ГЁГ±Гј
 		{
-			scanf("%d", &value);//присваиваем переменной vaule значение числа введённого пользователем
+			scanf("%d", &value);//ГЇГ°ГЁГ±ГўГ ГЁГўГ ГҐГ¬ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г®Г© vaule Г§Г­Г Г·ГҐГ­ГЁГҐ Г·ГЁГ±Г«Г  ГўГўГҐГ¤ВёГ­Г­Г®ГЈГ® ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«ГҐГ¬
 
 			m = turn(value, secret);
 
 			if (m == 0)
-				printf("You ygadal!\n");// угадал
+				printf("You ygadal!\n");// ГіГЈГ Г¤Г Г«
 
 			if (m == 1)
 				printf("Net, vvedennoe chislo menshe\n");
@@ -38,7 +37,7 @@ int main()
 			
 		}
 			if (n == 100)
-				printf("You proigrali\n");// ты не Удачник и проиграл
+				printf("You proigrali\n");// ГІГ» Г­ГҐ Г“Г¤Г Г·Г­ГЁГЄ ГЁ ГЇГ°Г®ГЁГЈГ°Г Г«
 	
 	return 0;
 }
