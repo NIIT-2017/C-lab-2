@@ -15,9 +15,7 @@ char* layout(char buf[], int line, int count)
 		{
 			buf[i++] = '*';
 			buf[i] = '\0';
-			buf[i] = '\n';
 		}
 
-	return buf;
-	
+	return buf;	
 }
