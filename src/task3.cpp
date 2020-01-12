@@ -7,7 +7,7 @@ char* layout(char buf[], int line, int count)
 	int j;
 	int i;
 		
-		for (i = 0; i <= count - line; i++) 
+		for (i = 0; i < count - line; i++) 
 		{
 			buf[i] = ' ';
 		}
