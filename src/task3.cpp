@@ -14,6 +14,7 @@ char* layout(char buf[], int line, int count)
 		for (j = 1; j < line * 2; j++) 
 		{
 			buf[i++] = '*';
+			buf[i] = '\0';
 			buf[i] = '\n';
 		}
 
