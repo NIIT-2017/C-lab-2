@@ -2,33 +2,32 @@
 #include "task2.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include <time.h>
 
 
 int main()
 {
-	int value; //value введённое число
-	int	secret = 0;// переменные secret число загаданное случайной переменнойе
+	int value; //value РІРІРµРґС‘РЅРЅРѕРµ С‡РёСЃР»Рѕ
+	int	secret = 0;// РїРµСЂРµРјРµРЅРЅС‹Рµ secret С‡РёСЃР»Рѕ Р·Р°РіР°РґР°РЅРЅРѕРµ СЃР»СѓС‡Р°Р№РЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№Рµ
 	int n;
-	int m = 0;//n условие
+	int m = 0;//n СѓСЃР»РѕРІРёРµ
 	
 	printf("Igra ygadai chislo\n");
 	printf("Computer zagadal chislo ot 1 do 100\n");
 	srand(time(NULL));
 
-	secret = rand() % 100 + 1; //число от 1 до 100
+	secret = rand() % 100 + 1; //С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 100
 	
 		printf("Vvedite chislo i nagmite Enter\n");
 			
-		for (n = 0; n < 100; n++) //тут задаём условия turn = 0 это счётчик цикла, turn <100 условия продолжительности , turn++, продолжение счётчика с того места где мы остановились
+		for (n = 0; n < 100; n++) //С‚СѓС‚ Р·Р°РґР°С‘Рј СѓСЃР»РѕРІРёСЏ turn = 0 СЌС‚Рѕ СЃС‡С‘С‚С‡РёРє С†РёРєР»Р°, turn <100 СѓСЃР»РѕРІРёСЏ РїСЂРѕРґРѕР»Р¶РёС‚РµР»СЊРЅРѕСЃС‚Рё , turn++, РїСЂРѕРґРѕР»Р¶РµРЅРёРµ СЃС‡С‘С‚С‡РёРєР° СЃ С‚РѕРіРѕ РјРµСЃС‚Р° РіРґРµ РјС‹ РѕСЃС‚Р°РЅРѕРІРёР»РёСЃСЊ
 		{
-			scanf("%d", &value);//присваиваем переменной vaule значение числа введённого пользователем
+			scanf("%d", &value);//РїСЂРёСЃРІР°РёРІР°РµРј РїРµСЂРµРјРµРЅРЅРѕР№ vaule Р·РЅР°С‡РµРЅРёРµ С‡РёСЃР»Р° РІРІРµРґС‘РЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
 
 			m = turn(value, secret);
 
 			if (m == 0)
-				printf("You ygadal!\n");// угадал
+				printf("You ygadal!\n");// СѓРіР°РґР°Р»
 
 			if (m == 1)
 				printf("Net, vvedennoe chislo menshe\n");
@@ -38,7 +37,7 @@ int main()
 			
 		}
 			if (n == 100)
-				printf("You proigrali\n");// ты не Удачник и проиграл
+				printf("You proigrali\n");// С‚С‹ РЅРµ РЈРґР°С‡РЅРёРє Рё РїСЂРѕРёРіСЂР°Р»
 	
 	return 0;
 }
