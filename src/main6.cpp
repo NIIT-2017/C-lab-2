@@ -2,9 +2,9 @@
 
 int main()
 {
-    char line[SIZE] = { 0 };
+    char line[256] = { 0 };
     printf("enter a line\n");
-    fgets(line, SIZE, stdin);
+    fgets(line, 256, stdin);
     if (line[strlen(line) - 1] == '\n')
         line[strlen(line) - 1] = '\0';
     printf(clear(line));

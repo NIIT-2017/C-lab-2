@@ -5,7 +5,7 @@ int main()
     time_t now;
     time(&now);
     srand(now);
-    int secret = MIN + rand() % (MAX - MIN + 1);
+    int secret = 1 + rand() % (100 - 1 + 1);
     int value = 0; 
     int result = 0;
     do {

@@ -1,21 +1,19 @@
 #include<stdio.h>
 #include<string.h>
 
-#define N 256
-
 int main()
 {
-    char line[N] = {};
-    int a[N] = { 0 };
+    char line[256] = {};
+    int a[256] = { 0 };
     printf("Enter a line:\n");
-    fgets(line, N, stdin);
+    fgets(line, 256, stdin);
     if (line[strlen(line) - 1] == '\n')
         line[strlen(line) - 1] = '\0';
     for (int count = 0; line[count]; count++)
     {
         a[line[count]]++;
     }
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < 256; i++)
     {
         if (a[i] == 0)
             continue;

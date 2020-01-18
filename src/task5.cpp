@@ -2,7 +2,7 @@
 
 char* password(char* line)
 {
-    for (int i = 0; i < SIZE; i++)
+    for (int i = 0; i < 8; i++)
     {
         char a = rand() % 3;
         if (a == 0)
@@ -12,6 +12,6 @@ char* password(char* line)
         if (a == 2)
             line[i] = '0' + rand() % ('9' - '0' + 1);
     }
-    line[SIZE] = '\0';
+    line[8] = '\0';
     return line;
 }
