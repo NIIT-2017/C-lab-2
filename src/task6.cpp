@@ -20,7 +20,8 @@ char* clear(char* line)
         if (start)
         {
             line[i -spaces] = line[i];
-            line[i]=' ';
+            if(spaces!=0)
+                line[i]=' ';
         }
     }
     line[len - spaces] = '\0';
