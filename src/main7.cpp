@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main7()
+int main()
 {
     int freq[128];
     for (int i = 0; i < 128; i++)

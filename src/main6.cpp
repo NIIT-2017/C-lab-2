@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "task6.h"
-int main6()
+int main()
 {
     char buf[100];
     fgets(buf,100,stdin);

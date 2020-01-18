@@ -1,7 +1,7 @@
 #pragma once
 #include <stdio.h>
 #include "task1.h"
-int main1()
+int main()
 {
     float currentHeight=1000,maxheight = 1000;
     clock_t fromStart = clock();

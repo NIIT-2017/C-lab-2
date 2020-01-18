@@ -1,7 +1,7 @@
 #include "task2.h"
 #include <stdio.h>
 #include <random>
-int main2()
+int main()
 {
     srand(time_t(NULL));
     int secret = rand() % 100;

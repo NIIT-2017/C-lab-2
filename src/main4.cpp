@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include "task4.h"
-int main4()
+int main()
 {
     char buf[50];
     scanf("%s",buf);
