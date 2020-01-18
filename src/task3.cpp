@@ -6,8 +6,10 @@ char* layout(char buf[], int line, int count)
     {
         if (i < (count - line))
             buf[i] = ' ';
-        else if ((i >= (count - line)) && (i < ((count - line) + (line - 1) * 2 + 1)))
+        else if (i < ((count - line) + (line - 1) * 2 + 1))
             buf[i] = '*';
+        else
+            buf[i] = '\0';
     }
     return buf;
 }
