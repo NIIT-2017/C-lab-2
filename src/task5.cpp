@@ -23,5 +23,6 @@ char* password(char* line)
 
 	line[8] = '\0';
 
+
 return line;
 }
