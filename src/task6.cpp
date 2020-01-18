@@ -23,5 +23,6 @@ char* clear(char* line)
             line[i]=' ';
         }
     }
+    line[len - spaces] = '\0';
     return line;
 }
