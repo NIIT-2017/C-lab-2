@@ -20,6 +20,8 @@ char* password(char* line)
 		else
 			line[i] = 'a' + rand() % ('z' - 'a' + 1);
 	}
+
 	line[8] = '\0';
+
 return line;
 }
