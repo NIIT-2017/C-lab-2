@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include <time.h>
 #include "task5.h"
 int main()
 {
+    srand(time(NULL));
     char buf[50];
-    buf[49] = '\0';
-    printf(password(buf));
+    buf[9] = '\0';
+    for(int i=0;i<10;i++)
+        printf("%s\n",password(buf));
     return 0;
 }
