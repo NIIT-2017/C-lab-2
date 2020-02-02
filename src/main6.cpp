@@ -1,14 +1,19 @@
 #include <stdio.h>
-#include <string.h>
 #include "task6.h"
+#include <string.h>
+#define N 256
 
 int main()
 {
-	char buf[256];
-	printf("jgi balalaeshnik! ");
-	fgets(buf, 256, stdin);
-	if (buf[strlen(buf) - 1] == '\n')
-		buf[strlen(buf) - 1] = '\0';
-	printf("%s\n", clear(buf));
+	char line[N];
+
+	printf("Input string: ");
+	fgets(line, N, stdin);
+
+	if (line[strlen(line) - 1] == '\n')
+		line[strlen(line) - 1] = '\0';
+
+	printf(clear(line));
+
 	return 0;
-} 
+}

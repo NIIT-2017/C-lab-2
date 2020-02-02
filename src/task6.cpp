@@ -1,32 +1,29 @@
-#include <stdio.h>
 #include <string.h>
 
 char * clear(char * line)
 {
-	int j = 0;
-	int i = strlen(line) - 1;
-	while (line[i] == ' ')
+	int i, lenth = strlen(line);
+
+	while (line[0] == ' ')
 	{
-		line[i] = '\0';
-		i--;
+		for (int k = 0; k < lenth; k++)
+			line[k] = line[k + 1];
+		lenth--;
 	}
-	while (line[j] == ' ')
-	{
-		for (int a = 0; a <= (strlen(line) - 1); a++)
+
+	for (i = 0; i < lenth; i++)
+		while (line[i] == ' ' && line[i + 1] == ' ')
 		{
-			line[a] = line[a + 1];
+			for (int k = i; k < lenth; k++)
+				line[k] = line[k + 1];
+			lenth--;
 		}
-	}
-	while (line[j])
+
+	while (line[lenth - 1] == ' ')
 	{
-		if (line[j] == ' ' && line[j + 1] == ' ')
-		{
-			for (int a = j; a <= strlen(line) - 1; a++)
-			{
-				line[a] = line[a + 1];
-			}
-		}
-		else j++;
+		line[lenth - 1] = '\0';
+		lenth--;
 	}
+
 	return line;
-} 
+}

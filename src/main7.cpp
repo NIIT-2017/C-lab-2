@@ -1,23 +1,39 @@
 #include <stdio.h>
-#include <string.h>
+#define N 256
 
 int main()
 {
-	char last[256];
-	int zer[256] = { 0 };
-	printf("Gadanie po naboru bukv bez probelov\n");
-	fgets(last, 256, stdin);
-	if (last[strlen(last) - 1] == '\n')
-		last[strlen(last) - 1] = '\0';
-	for (int schet = 0; last[schet]; schet++)
+	char str[N];
+	int pres_str[N] = { 0 };
+	char buf[N] = { 0 };
+	buf[0] = '\0';
+	int count[N] = { 0 };
+	int j = 0;
+	int k = 0;
+	printf("Enter a string: ");
+	fgets(str, N, stdin);
+	for (j; str[j] != '\n'; j++)
+		;
+	str[j] = '\0';
+	j = 0;
+	for (int i = 0; str[i] != '\0'; i++)
+	{
+		if (pres_str[str[i]] != 0)
 		{
-			zer[last[schet]]++;
+			while (str[i] != buf[k])
+				k++;
+			count[buf[k]]++;
 		}
-	for (int i = 0; i < 256; i++)
+		else if (pres_str[str[i]] == 0)
 		{
-			if (zer[i] == 0)
-				;
-			else printf("%c - %d\n", i, zer[i]);
+			buf[j] = str[i];
+			pres_str[str[i]] = 1;
+			count[buf[j]]++;
+			j++;
 		}
+	}
+	buf[j + 1] = '\0';
+	for (int i = 0; buf[i] != '\0'; i++)
+		printf("%c-%d\n", buf[i], count[buf[i]]);
 	return 0;
-} 
+}
