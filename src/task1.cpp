@@ -1,6 +1,6 @@
-#include "task1.h"
-
 float height(int currTime, int startHeight)
 {
-	return (startHeight - ((9.81*currTime*currTime) / 2));
-} 
+	const float g = 9.81;
+	float ans = startHeight - g * currTime*currTime / 2;
+	return (ans >= 0 ? ans : 0);
+}

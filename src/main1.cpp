@@ -1,32 +1,23 @@
-# define _CRT_SECURE_NO_WARNINGS_ 
-
-#include <time.h>
 #include <stdio.h>
+#include <time.h>
 #include "task1.h"
+
 
 int main()
 {
-	int currTime = 0;
 	int startHeight = 0;
-	printf("88005553535.0\n");
-	scanf("%i\n", &startHeight);
-	float now = startHeight;
-	if (startHeight <= 0)
+	int t;
+	printf("Enter with a start height of fall of the bomb, H \n");
+	scanf("%d", &startHeight);
+	t = 0;
+	while (height(t, startHeight) > 0)
 	{
-		printf("che, you na bombe sitting?\n");
-		return 1;
+		printf("t=%02d c h=%2.1f m\n", t, height(t, startHeight));
+		unsigned int retTime = time(0) + 1;
+		while (time(0) < retTime);
+		t++;
 	}
-	while (1)
-	{
-		if (now <= 0)
-		{
-			printf("BABAH!!!\n");
-			break;
-		}
-		printf("t=%02ic h=%06.1fm\n", currTime, now);
-		clock_t go = clock();
-		while (clock() < go + CLOCKS_PER_SEC);
-		now = height(++currTime, startHeight);
-	}
+	printf("BABAH!!!");
+
 	return 0;
-} 
+}
