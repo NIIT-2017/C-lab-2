@@ -2,31 +2,23 @@
 
 char* process(char* line)
 {
-	int i = 0;
-	int j = strlen(line) - 1;
-	int drag = -1;
-
-	while (i < j) 
+	int i = 0, j = strlen(line) - 1;
+	char buf;
+	while (i < j)
 	{
-		if (line[i] >= '0' && line[i] <= '9') 
+		if (line[i] >= 'a'&&line[i] <= 'z')
 		{
-			drag = line[i];
-		}
-		else i++;
-
-		if (line[j] >= '0' && line[j] <= '9')
-		{
-			j--;
-		}
-		else if (drag != -1)
-		{
-			line[i] = line[j];
-			line[j] = drag;
-			drag = -1;
 			i++;
-			j--;
+			continue;
 		}
-
+		if (line[j] >= '0'&&line[j] <= '9')
+		{
+			j--;
+			continue;
+		}
+		buf = line[i];
+		line[i] = line[j];
+		line[j] = buf;
 	}
 	return line;
-} 
+}
