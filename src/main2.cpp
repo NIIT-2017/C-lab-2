@@ -1,39 +1,21 @@
-#include "task2.h"
-#include <time.h>
 #include <stdio.h>
-#include <stdlib.h>
+#include <time.h>
+#include "task2.h"
 
-int main()
+int main(void)
 {
-	time_t now;
-	time(&now);
-	srand(now);
-	int secret = ((rand() % 100) + 1);
-	int value = 0;
-	int flag = 1;
-	printf("I want to play a game with you... \n");
-	printf("%d check\n", secret);
-	while (flag)
+	int secret, value = -1;
+
+	secret = 1 + time(NULL) % 100;
+	while (turn(value, secret) != 0)
 	{
-		scanf("%i", &value);
-		if (value <= 0 || value > 100)
-			printf("Very mimo...\n");
-		else
-		{
-			switch (turn(value, secret))
-			{
-			case 1:
-				printf("down\n");
-				break;
-			case -1:
-				printf("up\n");
-				break;
-			case 0:
-				printf("tak ne interesno\n");
-				flag = 0;
-				break;
-			}
-		}
+		printf("I made a number, guess it! enter a number from 1 to 100: ");
+		scanf("%d", &value);
+		if (turn(value, secret) > 0)
+			printf("You number is too big\n");
+		else if (turn(value, secret) < 0)
+			printf("You number is too small\n");
 	}
+	printf("Guessed right!");
 	return 0;
-} 
+}
