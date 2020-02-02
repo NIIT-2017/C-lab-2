@@ -1,24 +1,17 @@
 #include <stdio.h>
 #include "task3.h"
-#include <string.h>
 
 int main()
 {
-	char buf[200];
-	int line = 1, count = 0;
-
-	printf("goni chislo, do 21 \n");
-	scanf("%i", &count);
-	if (count <= 1)
+	int line = 1;
+	int count;
+	char buf[256];
+	printf("Enter a count of line of the triangle: ");
+	scanf("%d", &count);
+	for (line = 1; line <= count; line++)
 	{
-		printf("Kiss my BASS! \n");
-	}
-	else
-	{
-		for (line; (line <= count); line++)
-		{
-			printf("%s\n", layout(buf, line, count));
-		}
+		layout(buf, line, count);
+		printf("%s\n", buf);
 	}
 	return 0;
-} 
+}

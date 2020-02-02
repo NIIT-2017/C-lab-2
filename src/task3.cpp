@@ -1,15 +1,14 @@
 char * layout(char buf[], int line, int count)
 {
-	int c = 0;
-	int redStar = (line * 2 - 1);
-	int pusto = (count * 2 - 1 - redStar) / 2; // te che bez const ne nravitsa?!
-	for (c; c < pusto + redStar; c++)
+	int i = 0;
+	for (i = 0; i < count - line; i++)
 	{
-		if (c < pusto)
-			buf[c] = ' ';
-		else
-			buf[c] = '*';
+		buf[i] = ' ';
 	}
-	buf[c] = '\0';
+	for (i = count - line; i < count + line - 1; i++)
+	{
+		buf[i] = '*';
+	}
+	buf[count + line - 1] = '\0';
 	return buf;
-} 
+}
