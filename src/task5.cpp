@@ -1,31 +1,20 @@
-#include <stdio.h>
-#include "task5.h"
 #include <stdlib.h>
+#define LEN 8
 
-char random(char pas)
+char * password(char * line)
 {
-    switch (pas)
-    {
-    case '0':
-        return rand() % ('Z' - 'A' + 1) + 'A';
-        break;
-    case '1':
-        return rand() % ('z' - 'a' + 1) + 'a';
-        break;
-    case '2':
-        return rand() % ('9' - '0' + 1) + '0';
-        break;
-    }
-}
+	for (int i = 0; i < LEN; i++)
+	 {
+		int random = rand() % 3;
+			if (random == 0)
+				line[i] = rand() % ('z' - 'a' + 1) + 'a';
+			else if (random == 1)
+				line[i] = rand() % ('Z' - 'A' + 1) + 'A';
+			else if (random == 2)
+				line[i] = rand() % ('9' - '0' + 1) + '0';
+	 }
 
-char* password(char* line)
-{
-    for (int i = 0; i < 9; i++)
-    {
-        char pas = rand() % ('9' - '0' + 1) + '0';
-        line[i] = random(pas);
-    }
-    line[SIZE - 1] = '\0';
+	line[LEN] = '\0';
 
-    return line;
-}
+return line;
+} 
