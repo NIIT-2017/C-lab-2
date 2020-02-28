@@ -2,7 +2,7 @@
 #include "task3.h"
 
 
-char*layout(char buf[], int line, int count)
+char * layout(char buf[], int line, int count)
 {
 	int i = 0;
 	int j = 0;
