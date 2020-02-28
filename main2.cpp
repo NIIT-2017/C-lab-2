@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include "task2.h"
 
 int main()
 
 {
+	int secret = rand() % 100;
+	int value = 0;
 	int turn(int value, int secret);
 
 	{
-		int value = 0;
-
 		time_t now;
 		time(&now);
 		srand(now);
-		int secret = rand() % 100;
+		rand();
 	}
 
 		printf("enter a positive value (0-100)\n");
@@ -31,7 +32,7 @@ int main()
 		else if (secret == value)
 			break;
 	}
-	printf("great, that's my value!");
+	printf("great, that's my value!\n");
 
 	return 0;
 }

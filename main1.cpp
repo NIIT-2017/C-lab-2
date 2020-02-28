@@ -36,3 +36,6 @@ int main()
 
 	
 }
+
+
+float height(int currTime, int startHeight);

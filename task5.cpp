@@ -10,8 +10,8 @@ char* password(char* line)
 
 	line[0] = rand() % ('9' - '0' + 1) + '0';
 	line[1] = rand() % ('Z' - 'A' + 1) + 'A';
-    line[2] = rand() % ('z' - 'a' + 1) + 'a';
-		
+	line[2] = rand() % ('z' - 'a' + 1) + 'a';
+
 	for (int i = 3; i < 8; i++)
 
 	{
@@ -57,9 +57,6 @@ char* password(char* line)
 
 		return line;
 
-
-
 	}
-
 
 }

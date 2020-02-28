@@ -1,1 +1,1 @@
-int turn(int value, int secret)
+int turn(int value, int secret);

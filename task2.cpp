@@ -1,12 +1,21 @@
 #include <stdio.h>
-#include <task2.h>
+
 
 int turn(int value, int secret)
-{
-	int value = 0;
 
-	time_t now;
-	time(&now);
-	srand(now);
-	int secret = rand() % 100;
+
+
+{
+
+	if (secret == value)
+
+		return 0;
+
+	if (secret < value)
+
+		return 1;
+
+	if (secret > value)
+
+		return -1; 
 }
