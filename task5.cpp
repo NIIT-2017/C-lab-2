@@ -3,6 +3,7 @@
 
 
 char* password(char* line)
+
 {
 	char j = 0;
 	int val = 0;
