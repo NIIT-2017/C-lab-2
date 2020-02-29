@@ -1,15 +1,17 @@
-#include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
+#define _CRT_SECURE_NO_WARNINGS
 #include "task5.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main()
 {
-	char line[10];
-	time_t now;
-	time(&now);
-	srand(now);
-	printf("na parol' - ");
-	printf(password(line));
-	printf("\n");
-} 
+	srand(time(0));
+	char line[9] = { 0 };
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%s\n", password(line));
+	}
+	
+	return 0;
+}
