@@ -1,24 +1,25 @@
 #include <string.h>
 
 char* process(char* line)
+
 {
-	int i = 0, j = strlen(line) - 1;
-	char buf;
-	while (i < j)
+int i, j, words, str = 0;
+str = strlen(line);
+
+	for (i = 0; i < str; i++)
 	{
-		if (line[i] >= 'a'&&line[i] <= 'z')
-		{
-			i++;
-			continue;
+	 for (j = str - 1; j > i; j--)
+	  {
+		if ((line[j] >= 'a' && line[j] <= 'z') && (line[i] >= '0' && line[i] <= '9'))
+    	{
+	      words = line[j];
+		  line[j] = line[i];
+		  line[i] = words;
+		  break;
 		}
-		if (line[j] >= '0'&&line[j] <= '9')
-		{
-			j--;
-			continue;
-		}
-		buf = line[i];
-		line[i] = line[j];
-		line[j] = buf;
+	   else;
+	  }
+
 	}
-	return line;
+return line;
 }

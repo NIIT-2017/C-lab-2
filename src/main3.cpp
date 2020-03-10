@@ -1,18 +1,17 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "task3.h"
 
 int main()
+
 {
-	int line = 1;
-	int count;
-	char buf[256];
-	printf("Enter a count of line of the triangle: ");
+	char buf[100];
+	int line = 0, count = 0;
+
+	printf("Vvedite kolichestvo liniy:");
 	scanf("%d", &count);
+
 	for (line = 1; line <= count; line++)
-	{
-		layout(buf, line, count);
-		printf("%s\n", buf);
-	}
+		printf(layout(buf, line, count));
+
 	return 0;
 }

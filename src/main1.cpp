@@ -1,29 +1,23 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include "task1.h"
 #include <stdio.h>
-#include <time.h>
+#include "task1.h"
 
 int main()
+
 {
+	int currTime = 0;
+	int startHeight = 0;
 
-	float startHeight = 0;
-	float currHeight = 0;
+	printf("Vvedite visoty sbrosa bombi:");
+	scanf("%d", &startHeight);
 
-	printf("enter initial height in meters\n");
-	scanf("%f", &startHeight);
-
-	for (int currTime = 0;; currTime++)
+	while (height(currTime, startHeight) > 0)
 	{
-		currHeight = height(currTime, startHeight);
-		if (currHeight > 0)
-			printf("t = %02d c h = %0.1f m\n", currTime, currHeight);
-		else break;
-		clock_t startTime = clock();
-		while (clock() < startTime + CLOCKS_PER_SEC);
+		printf("t=%d    H=%0.1f\n", currTime, height(currTime, startHeight));
+		currTime++;
+
 	}
 
-	printf("BABAH!!!");
+	printf("BABAH!");
 
 	return 0;
-
 }

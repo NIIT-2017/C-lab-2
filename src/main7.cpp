@@ -1,39 +1,39 @@
 #include <stdio.h>
+#include <string.h>
+
 #define N 256
 
 int main()
 {
-	char str[N];
-	int pres_str[N] = { 0 };
-	char buf[N] = { 0 };
-	buf[0] = '\0';
-	int count[N] = { 0 };
-	int j = 0;
-	int k = 0;
-	printf("Enter a string: ");
-	fgets(str, N, stdin);
-	for (j; str[j] != '\n'; j++)
-		;
-	str[j] = '\0';
-	j = 0;
-	for (int i = 0; str[i] != '\0'; i++)
+	char buf[N];
+	char str[128] = { 0 };
+
+	int i;
+
+	puts("Vvedite stroku:");
+	fgets(buf, N, stdin);
+
+	int lenght = strlen(buf);
+
+	if (buf[lenght - 1] == '\n')
+
+		buf[lenght - 1] = '\0';
+
+
+	for (i = 0; i < lenght - 1; i++)
+
+		str[buf[i]]++;
+
+	for (i = 0; i < lenght - 1; i++)
 	{
-		if (pres_str[str[i]] != 0)
+		if (str[buf[i]] > 0)
 		{
-			while (str[i] != buf[k])
-				k++;
-			count[buf[k]]++;
-		}
-		else if (pres_str[str[i]] == 0)
-		{
-			buf[j] = str[i];
-			pres_str[str[i]] = 1;
-			count[buf[j]]++;
-			j++;
+			printf("%c - %d\n", buf[i], str[buf[i]]);
+			str[buf[i]] = 0;
 		}
 	}
-	buf[j + 1] = '\0';
-	for (int i = 0; buf[i] != '\0'; i++)
-		printf("%c-%d\n", buf[i], count[buf[i]]);
+
+	getchar();
+
 	return 0;
 }

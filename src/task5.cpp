@@ -1,25 +1,20 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include "task5.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#define LEN 8
 
-char* password(char* line)
+char * password(char * line)
 {
-	
-	for (int i = 0; i < 8; i++)
-	{
-		switch (rand() % 3)
-		{
-		case 0:
-			line[i] = rand() % 26 + 'a'; break;
-		case 1:
-			line[i] = rand() % 26 + 'A'; break;
-		case 2:
-			line[i] = rand() % 10 + '0'; break;
-		}
-	}
-	line[8] = '\0';
+	for (int i = 0; i < LEN; i++)
+	 {
+		int random = rand() % 3;
+			if (random == 0)
+				line[i] = rand() % ('z' - 'a' + 1) + 'a';
+			else if (random == 1)
+				line[i] = rand() % ('Z' - 'A' + 1) + 'A';
+			else if (random == 2)
+				line[i] = rand() % ('9' - '0' + 1) + '0';
+	 }
 
-	return line;
+	line[LEN] = '\0';
+
+return line;
 }

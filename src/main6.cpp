@@ -1,19 +1,16 @@
 #include <stdio.h>
 #include "task6.h"
-#include <string.h>
-#define N 256
 
 int main()
 {
-	char line[N];
+	char line[100];
 
-	printf("Input string: ");
-	fgets(line, N, stdin);
+	puts("Vvedite stroky:");
+	fgets(line, 100, stdin);
 
-	if (line[strlen(line) - 1] == '\n')
-		line[strlen(line) - 1] = '\0';
+	printf("%s", clear(line));
 
-	printf(clear(line));
+	getchar();
 
 	return 0;
 }

@@ -1,14 +1,18 @@
+#include <stdio.h>
+
 char * layout(char buf[], int line, int count)
 {
-	int i = 0;
-	for (i = 0; i < count - line; i++)
+	int i;
+	for (i = 0; i < (count + (line - 1)); i++)
 	{
-		buf[i] = ' ';
+		if (i < (count - line))
+			buf[i] = ' ';
+		else if
+			(i >= (count - line))
+			buf[i] = '*';
 	}
-	for (i = count - line; i < count + line - 1; i++)
-	{
-		buf[i] = '*';
-	}
-	buf[count + line - 1] = '\0';
+	buf[i] = '\0';
+	putchar('\n');
+
 	return buf;
 }
