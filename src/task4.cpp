@@ -1,9 +1,11 @@
+#include <string.h>
+
 char* process(char* line)
 {
-	int count=0;
-	int i=0;
 	
-	int count = strlen(line) - 1;
+	int i=0;
+	char buf='0';
+	int j = strlen(line) - 1;
 	char sym;
 	for (int i = 0; i < j; i++)
 	{
@@ -15,9 +17,9 @@ char* process(char* line)
 			}
 			if (i < j)
 			{
-				buff = line[j];
+				buf = line[j];
 				line[j] = line[i];
-				line[i] = buff;
+				line[i] = buf;
 				j--;
 			}
 		}
