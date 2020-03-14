@@ -5,8 +5,15 @@
 
 int main()
 {
-	char line[SIZE]= "   xwwwu  qioque    qrehq   ";
+	//char line[SIZE]= "   xwwwu  qioque    qrehq   ";
 	
+	char line[SIZE];
+	printf("vvedite stroku:\n");
+	//scanf("%s", &line);
+
+	fgets(line, SIZE, stdin);
+
+
 	printf("%s\n", line);
 	//clear(line);
 	
