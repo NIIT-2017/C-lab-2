@@ -7,7 +7,7 @@
 int main()
 {
 	setlocale(LC_ALL, "RUSSIAN");
-	char line[255] = { 0.0 };
+	char line[255] = { 0 };
 	int sym[255] = { 0 };
 	int len = 0;
 	int i = 0;

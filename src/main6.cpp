@@ -9,7 +9,7 @@ int main()
 	setlocale(LC_ALL, "RUSSIAN");
 	char line[255];		
 	printf("Ведите  строку \n");
-	fgets(line, 255, stdin);			
+	fgets(line, 255, stdin);	
 	fputs(clear(line),stdout);
 	return 0;
 }
