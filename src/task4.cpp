@@ -2,19 +2,25 @@ char* process(char* line)
 {
 	int count=0;
 	int i=0;
-	while(line[count]!='\0')
-		count++;
+	
+	int count = strlen(line) - 1;
 	char sym;
-	for (i=0; i<count-1; i++)
-		if (line[i]<'A')
-		for(int j=count-1; j>i; j--)
+	for (int i = 0; i < j; i++)
+	{
+		if ((line[i] >= '0') && (line[i] <= '9'))
 		{
-			if (line[j]>='A')
+			while ((line[j] >= '0') && (line[j] <= '9'))
 			{
-				sym=line[j];	
-				line[j]=line[i];
-				line[i]=sym;
+				j--;
+			}
+			if (i < j)
+			{
+				buff = line[j];
+				line[j] = line[i];
+				line[i] = buff;
+				j--;
 			}
 		}
+	}
 	return line;
 }
