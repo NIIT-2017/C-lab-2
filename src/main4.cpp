@@ -7,12 +7,14 @@
 
 int main()
 {
-	
-	char line[256];
+	//char line[SIZE]="23sg6v3n2846v23c";
+
+char line[256];
 	printf("vvedite stroku:\n");
+	//fgets(line, 256, stdin);
 	scanf("%s", &line);
 
-	//printf("%s\n", line);
+	printf("%s\n", line);
 	printf("%s\n", process(line));
 
 
