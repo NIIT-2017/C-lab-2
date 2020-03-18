@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <windows.h>
+
 #include"task1.h"
 
 int main()
@@ -16,7 +16,7 @@ int main()
 		
 		printf("t=%d c h=%.1f m \n", t, l);
 		l = height(++t, h);
-		Sleep(1000);
+		
 	}
 	printf("BOOM");
 	return 0;
