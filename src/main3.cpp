@@ -12,7 +12,7 @@ int main()
 	scanf("%d", &count);
 	for (line = 1; line <= count; line++)
 	{
-		char buf[100] = { 0 };		
+		char buf[100] = {0};		
 		puts(layout(buf, line, count));
 		puts("\n");
 	}
