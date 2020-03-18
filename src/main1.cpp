@@ -8,6 +8,7 @@ int main()
 	int t=0;
 	float l;
 	int h;
+	printf("enter higth \n");
 	scanf("%d", &h);
 	l = h;
 	while ( l > 0 )
