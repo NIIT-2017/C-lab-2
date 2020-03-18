@@ -9,7 +9,7 @@
 int main()
 {
 	srand(time(0));
-	char line[256]={0};
+	char line[9]={0};
 	
 	for (int i=0; i<10; i++)
 		printf("%s\n", password(line));

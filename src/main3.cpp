@@ -10,7 +10,9 @@ int main()
 	int line=0;
 	int count=0;
 	char buf[100]={0};
+	printf("vvedite kolichestvo strok:\n");
 	scanf("%d", &count);
+	printf("___________\n");
 	
 	for (int line=1; line<=count; line++)
 		printf("%s\n", layout(buf, line, count));

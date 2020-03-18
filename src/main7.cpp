@@ -7,15 +7,12 @@
 int main()
 {
 	char str[SIZE] = { '0' };
-	unsigned int fr[SIZE] = { 0 };
+	int fr[SIZE] = { 0 };
 	printf("enter string:\n");
-	scanf("%s", &str);
+	fgets(str, SIZE, stdin);
+	
+	int len = strlen(str)-1;
 
-	int len = 0;
-	while (str[len] != '\0')
-	{
-		len++;
-	}
 
 	int i = 0;
 	while (i < len)
@@ -23,15 +20,13 @@ int main()
 		fr[str[i]]++;
 		i++;
 	}
-
-	int chislo_simvolov = 0;
+	
 
 	for (int i = 0; i < SIZE; i++)
 	{
 		if (fr[i] != 0)
 		{
-			printf("%c - %u\n", i, fr[i]);
-			chislo_simvolov++;
+			printf("%c - %u\n", i, fr[i]);			
 		}
 			
 
