@@ -1,5 +1,5 @@
 #include "task6.h"
-#include<locale>
+
 #include<string.h>
 
 
