@@ -1,11 +1,11 @@
 
-#define g 9.81
+
 
 float height(int currTime, int startHeight)
 {
-	float L; 
+	float H,  g = 9.81;
 
-	L = (g * currTime * currTime) / 2;//пройденный путь
-	startHeight = startHeight - L;
-	return startHeight;//осталось до земли
+	
+	H =(float) startHeight - ((g * (float)(currTime * currTime)) / 2);
+	return H;//осталось до земли
 }
