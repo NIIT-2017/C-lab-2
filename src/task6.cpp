@@ -1,22 +1,23 @@
 #include "task6.h"
-
 #include<string.h>
 
 
 char* clear(char* line)
 {
-	int i = 0;
+	int i = 0, j = 0;
 	int len = strlen(line);
-	for (i = 0; i < len; i++)
+	while (line[i])
 	{
-		if (line[i] == ' ' && line[i + 1] == ' ')
+		if ((line[i] == ' ') && (line[i + 1] == ' '))
 		{
-			while (i < len - 1)
+			for (j = i; j <= strlen(line); j++)
 			{
-				line[i] = line[i + 1];
-				i++;
+				line[j] = line[j + 1];
 			}
-			i = -1;
+		}
+		else
+		{
+			i++;
 		}
 	}
 	return line;
