@@ -6,7 +6,7 @@ int main()
     float t_height = 0;
     int currTime = 0, startHeight = 0;
 
-    printf("Enter start height for yours bomb: \n");
+    printf("Indicate bomb drop height: \n");
     printf("Exemple: 5000 \n");
     scanf("%d", &startHeight);
 
